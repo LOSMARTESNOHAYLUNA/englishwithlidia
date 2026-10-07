@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Estudio English with Lidia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+:root{color-scheme:light}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<style>
+/* Layout: cabecera con ficha del cliente, pestañas horizontales y un panel por sección; la empresa analizada usa siempre el color de marca y los competidores la escala neutra. */
+:root{
+  --bg:#F1F4F6; --surface:#FFFFFF; --ink:#12202B; --muted:#566874; --line:#D6DEE4;
+  --brand:#0B6E8A; --brand-soft:#D9EEF4; --brand-ink:#FFFFFF;
+  --good:#1E7B4F; --good-soft:#DDF1E6; --warn:#9A6212; --warn-soft:#F8EBCF; --bad:#A9362C; --bad-soft:#F6DEDA;
+  --n1:#2B3A46; --n2:#5C6D79; --n3:#8A9AA6; --n4:#B2BEC7; --n5:#CBD4DA; --n6:#46586A;
+  --font-display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --font-body:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D151B; --surface:#15212A; --ink:#E5ECF1; --muted:#97A7B3; --line:#263743;
+    --brand:#52B8D6; --brand-soft:#12303A; --brand-ink:#08171D;
+    --good:#58C08A; --good-soft:#12301F; --warn:#E3AC57; --warn-soft:#352610; --bad:#EE8379; --bad-soft:#3A1915;
+    --n1:#C9D5DD; --n2:#9BABB7; --n3:#73848F; --n4:#546572; --n5:#3A4A56; --n6:#B0BFCA;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D151B; --surface:#15212A; --ink:#E5ECF1; --muted:#97A7B3; --line:#263743;
+  --brand:#52B8D6; --brand-soft:#12303A; --brand-ink:#08171D;
+  --good:#58C08A; --good-soft:#12301F; --warn:#E3AC57; --warn-soft:#352610; --bad:#EE8379; --bad-soft:#3A1915;
+  --n1:#C9D5DD; --n2:#9BABB7; --n3:#73848F; --n4:#546572; --n5:#3A4A56; --n6:#B0BFCA;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.5;padding-inline:16px;padding-block:24px 56px}
+.wrap{max-width:1120px;margin-inline:auto}
+h1,h2,h3{font-family:var(--font-display);margin:0;text-wrap:balance;line-height:1.15}
+h1{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.45rem;font-weight:650}
+h3{font-size:1.05rem;font-weight:650}
+p{margin:0}
+a{color:var(--brand)}
+.mono{font-family:var(--font-mono)}
+.eyebrow{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+header.top{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:flex-end;padding-bottom:20px;border-bottom:2px solid var(--ink)}
+header.top .lead{max-width:60ch;color:var(--muted);margin-top:8px}
+.facts{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.88rem;color:var(--muted)}
+.facts b{color:var(--ink);font-weight:600}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;margin-top:18px;padding-bottom:2px;border-bottom:1px solid var(--line)}
+nav.tabs button{flex:0 0 auto;font:600 .92rem var(--font-body);color:var(--muted);background:none;border:0;border-bottom:3px solid transparent;padding:10px 14px;cursor:pointer;white-space:nowrap}
+nav.tabs button:hover{color:var(--ink)}
+nav.tabs button[aria-selected="true"]{color:var(--brand);border-bottom-color:var(--brand)}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+section.panel{display:flex;flex-direction:column;gap:22px;padding-top:26px}
+.lede{color:var(--muted);max-width:72ch}
+.grid{display:grid;gap:14px}
+.g4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.card .k{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.card .v{font-family:var(--font-display);font-size:1.5rem;font-weight:700;line-height:1.1}
+.card p{font-size:.93rem;color:var(--muted)}
+.card.client{border-color:var(--brand);background:var(--brand-soft)}
+.pill{display:inline-block;font-family:var(--font-mono);font-size:.72rem;padding:2px 8px;border-radius:99px;font-weight:500;white-space:nowrap}
+.pill.alta{background:var(--bad-soft);color:var(--bad)}
+.pill.media{background:var(--warn-soft);color:var(--warn)}
+.pill.baja{background:var(--good-soft);color:var(--good)}
+.pill.plazo{background:var(--brand-soft);color:var(--brand)}
+.est{font-family:var(--font-mono);font-size:.68rem;font-weight:500;background:var(--warn-soft);color:var(--warn);padding:1px 6px;border-radius:3px;margin-left:4px;vertical-align:middle;white-space:nowrap}
+.src{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);background:var(--bg);border:1px solid var(--line);padding:1px 6px;border-radius:3px;white-space:nowrap}
+.note{border-left:3px solid var(--warn);background:var(--warn-soft);padding:12px 14px;font-size:.92rem;border-radius:0 4px 4px 0}
+.note b{font-weight:700}
+.chartbox{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px}
+.chartwrap{position:relative;height:min(62vw,460px);min-height:320px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.chips label{display:flex;align-items:center;gap:6px;font-size:.86rem;border:1px solid var(--line);border-radius:99px;padding:4px 12px 4px 8px;cursor:pointer;background:var(--bg)}
+.chips input{accent-color:var(--brand)}
+.tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:980px;font-size:.88rem}
+th,td{text-align:left;vertical-align:top;padding:12px 12px;border-bottom:1px solid var(--line)}
+th{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--bg);position:sticky;top:0}
+th button{all:unset;cursor:pointer;display:inline-flex;gap:4px;align-items:center}
+th button:focus-visible{outline:3px solid var(--brand)}
+tr.client td{background:var(--brand-soft)}
+tr.client td:first-child{box-shadow:inset 4px 0 0 var(--brand)}
+td .nm{font-weight:700;font-family:var(--font-display)}
+.dafo{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.dafo .q{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.dafo .q h3{display:flex;align-items:center;gap:10px}
+.dafo .tag{width:28px;height:28px;border-radius:4px;display:grid;place-items:center;font:700 .95rem var(--font-display);color:var(--brand-ink)}
+.q.f .tag{background:var(--good)} .q.d .tag{background:var(--n6)} .q.a .tag{background:var(--bad)} .q.o .tag{background:var(--brand)}
+.dafo ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.dafo li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:.92rem}
+.dafo li svg{width:20px;height:20px;margin-top:2px}
+.dafo li b{display:block;font-weight:700}
+.dafo li span{color:var(--muted)}
+.recs{display:flex;flex-direction:column;gap:12px}
+.rec{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;grid-template-columns:1fr;gap:8px}
+.rec .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.rec h3{font-size:1.05rem}
+.rec p{color:var(--muted);font-size:.93rem}
+.rec .imp{font-size:.9rem}
+.rec .imp b{font-weight:700}
+ol.q-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.sources{font-size:.84rem;color:var(--muted);display:flex;flex-direction:column;gap:4px;margin:0;padding-left:18px}
+.method{font-size:.88rem;color:var(--muted);max-width:80ch}
+.legend-note{font-size:.84rem;color:var(--muted)}
+@media (max-width:520px){ .chartwrap{height:360px} }
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow">Estudio de mercado · consultoría del 7 de octubre de 2026</div>
+      <h1>English with Lidia</h1>
+      <p class="lead">Preparación de Aptis ESOL online en España: quién compite, a qué precio, qué huecos hay y qué propuesta de marketing encaja.</p>
+    </div>
+    <div class="facts">
+      <span><b>Web</b> englishwithlidia.es</span>
+      <span><b>Instagram</b> @englishwithlidiasoria</span>
+      <span><b>Zona</b> Soria · online en toda España</span>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Secciones del estudio">
+    <button role="tab" id="t1" aria-selected="true" aria-controls="p1">Resumen</button>
+    <button role="tab" id="t2" aria-selected="false" aria-controls="p2" tabindex="-1">Radar</button>
+    <button role="tab" id="t3" aria-selected="false" aria-controls="p3" tabindex="-1">Competidores</button>
+    <button role="tab" id="t4" aria-selected="false" aria-controls="p4" tabindex="-1">DAFO</button>
+    <button role="tab" id="t5" aria-selected="false" aria-controls="p5" tabindex="-1">Posicionamiento</button>
+    <button role="tab" id="t6" aria-selected="false" aria-controls="p6" tabindex="-1">Visibilidad</button>
+    <button role="tab" id="t7" aria-selected="false" aria-controls="p7" tabindex="-1">Recomendaciones</button>
+  </nav>
+
+  <!-- 1 RESUMEN -->
+  <section class="panel" id="p1" role="tabpanel" aria-labelledby="t1">
+    <div class="grid g4">
+      <div class="card"><span class="k">Competidores analizados</span><span class="v">6</span><p>Academias y plataformas online de Aptis ESOL con oferta visible en España.</p></div>
+      <div class="card"><span class="k">Fortaleza del mercado</span><span class="v">Media-alta</span><p>Hay centros asociados al British Council, plataformas 24/7 y planes mensuales. A la vez, el nicho está fragmentado y las reseñas son escasas.</p></div>
+      <div class="card"><span class="k">Principal amenaza</span><span class="v">Aptis Prepare</span><p>Se presenta como centro asociado del British Council, combina clases en directo y a tu ritmo, y aparece en rankings propios.</p></div>
+      <div class="card client"><span class="k">Principal oportunidad</span><span class="v">Más tráfico a una web que ya convierte</span><p>La web ya tiene prueba social, FAQ y formulario de diagnóstico. Falta llevarle visitas cualificadas con SEO por perfil y Google Ads.</p></div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h3>Qué es English with Lidia</h3>
+        <p>Una web de captación muy centrada en Aptis ESOL para docentes y también para otros perfiles. Titular emocional («Se consigue en semanas»), método NeuroAptis Strategy, 30+ docentes aprobados, 92 % de aprobados, testimonios en vídeo, reseñas de Google, FAQ de ocho preguntas y formulario para reservar un diagnóstico gratuito. Hay botón de WhatsApp, pestaña «Asegura tu plaza» y un sello de centro colaborador del British Council en el pie.</p>
+        <p><span class="src">Fuente: captura de la home. Cifras leídas de una imagen de baja resolución</span></p>
+      </div>
+      <div class="card">
+        <h3>Contexto de demanda</h3>
+        <p>La Junta de Andalucía reconoce Aptis ESOL Advanced para el profesorado bilingüe desde la Orden del 26 de marzo de 2025, y el examen se ha aprobado en procesos selectivos de la Policía Nacional. Otras fuentes hablan de 14 comunidades autónomas, pero ese dato lo afirma una academia. El reconocimiento depende de cada convocatoria.</p>
+        <p><span class="src">Fuente: Educación 3.0 · Academia Learning</span></p>
+      </div>
+      <div class="card">
+        <h3>Precios visibles en el mercado</h3>
+        <p>Lidia cobra <b>pago único por programa</b>: 195 € Express (10 h 1 a 1), 349 € Premium Academic y 649 € Tutorizado, con 3 cuotas sin intereses opcionales. En el mercado, un curso online de Aptis aparece a <b>270 €</b> (Academia Hermes, ficha de 2023) y a <b>340 € con IVA</b> (Emagister), y las plataformas de clases particulares pagan al profesor entre 15 y 30 €/hora. Su Premium queda en línea con el mercado y el Express sale a unos 19,5 €/hora en clases 1 a 1.</p>
+        <p><span class="src">Fuente: texto de su web · academiahermes.es · emagister.com</span></p>
+      </div>
+      <div class="card">
+        <h3>Qué falta por verificar</h3>
+        <p>Solo se ha podido ver una captura de la home. Faltan el precio del curso online a tu ritmo, el nº de reseñas de Google, los seguidores, el tráfico y las posiciones en Google, además de la lectura técnica de la web. Las puntuaciones del radar son estimaciones.</p>
+        <p><span class="est">Est.</span> marca cada cifra estimada; <span class="src">Fuente</span> marca cada dato contrastado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 RADAR -->
+  <section class="panel" id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+    <div>
+      <h2>Radar de posicionamiento</h2>
+      <p class="lede">Puntuación de 1 a 10 por dimensión. La línea gruesa es English with Lidia. Activa competidores para compararlos.</p>
+    </div>
+    <div class="chartbox">
+      <div class="chips" id="radarChips" role="group" aria-label="Competidores en el radar"></div>
+      <div class="chartwrap"><canvas id="radar" role="img" aria-label="Gráfico radar comparando English with Lidia con el mercado en seis dimensiones"></canvas></div>
+    </div>
+    <p class="method"><span class="est">Est.</span> Todas las puntuaciones son estimaciones razonadas a partir de lo visto en sus webs y fichas. «Rango de precios» sube con el posicionamiento premium. Para Lidia, la experiencia web sale de la captura de la home y la reputación de sus testimonios y reseñas de Google visibles, con el nº de reseñas aún sin conocer.</p>
+  </section>
+
+  <!-- 3 TABLA -->
+  <section class="panel" id="p3" role="tabpanel" aria-labelledby="t3" hidden>
+    <div>
+      <h2>Tabla comparativa</h2>
+      <p class="lede">Haz clic en un encabezado para ordenar. Donde pone N/D, el dato no está accesible o no se ha podido verificar.</p>
+    </div>
+    <div class="tablewrap">
+      <table id="cmp">
+        <thead><tr>
+          <th><button data-k="name">Nombre ↕</button></th>
+          <th><button data-k="loc">Formato ↕</button></th>
+          <th>Servicios principales</th>
+          <th><button data-k="priceNum">Precio ↕</button></th>
+          <th>Reseñas y redes</th>
+          <th>Diferenciador clave</th>
+          <th>Fuente</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="method">Instagram, Facebook, LinkedIn y Google Business Profile de los competidores no se han revisado: las plataformas bloquean la consulta automática. Conviene mirar sus perfiles antes de cerrar la propuesta.</p>
+  </section>
+
+  <!-- 4 DAFO -->
+  <section class="panel" id="p4" role="tabpanel" aria-labelledby="t4" hidden>
+    <div>
+      <h2>DAFO competitivo</h2>
+      <p class="lede">Orientado al mercado de preparación de Aptis, no a la empresa en abstracto.</p>
+    </div>
+    <div class="dafo">
+      <div class="q f">
+        <h3><span class="tag">F</span>Fortalezas de Lidia</h3>
+        <ul>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--good)"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Método con nombre propio</b><span>NeuroAptis Strategy es un enfoque que ninguna academia revisada usa, y lo repite toda la web.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--good)"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Prueba social visible</b><span>Testimonios en vídeo, reseñas de Google con 5 estrellas y cifras de aprobados (propias, a respaldar con datos).</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--good)"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Embudo de captación ya montado</b><span>Diagnóstico gratuito, formulario, WhatsApp, prueba de 7 días, garantía de aprobado (acceso gratis hasta obtener el título) y recursos gratuitos. Ninguna otra academia revisada ofrece esa garantía.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--good)"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Web indexada, con tienda y sello del British Council</b><span>Aparece en Google con el operador site, su robots.txt permite rastrear y tiene WooCommerce. En el pie lleva un sello de centro colaborador, que conviene confirmar.</span></div></li>
+        </ul>
+      </div>
+      <div class="q d">
+        <h3><span class="tag">D</span>Debilidades de los competidores</h3>
+        <ul>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--n6)"><path d="M5 5l10 10M15 5L5 15"/></svg><div><b>Grupos grandes y genéricos</b><span>Una reseña de Blue Parrot critica clases poco orientadas al examen. Aptis Prepare limita a 10 alumnos, el resto no lo indica.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--n6)"><path d="M5 5l10 10M15 5L5 15"/></svg><div><b>Poca prueba social independiente</b><span>Aptis Academia no tiene reseñas en Trustpilot. La cifra de +97 % de aprobados de Aptis Prepare la da la propia academia.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--n6)"><path d="M5 5l10 10M15 5L5 15"/></svg><div><b>Calendarios fijos</b><span>Cursos de 24 a 28 horas con fechas de inicio. Quien tiene convocatoria cercana necesita ritmo a medida.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--n6)"><path d="M5 5l10 10M15 5L5 15"/></svg><div><b>Precios opacos</b><span>Casi ninguna academia muestra tarifa sin contacto, lo que frena al comprador que compara.</span></div></li>
+        </ul>
+      </div>
+      <div class="q a">
+        <h3><span class="tag">A</span>Amenazas</h3>
+        <ul>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--bad)"><path d="M10 3l8 14H2z"/><path d="M10 8v4M10 14.5v.5"/></svg><div><b>Centros asociados al British Council</b><span>Aptis Prepare y Ready Go se presentan con ese sello, que da confianza inmediata.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--bad)"><path d="M10 3l8 14H2z"/><path d="M10 8v4M10 14.5v.5"/></svg><div><b>Práctica gratuita online</b><span>Aptis Academia regala un simulacro al mes y existen simuladores gratuitos y herramientas de IA.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--bad)"><path d="M10 3l8 14H2z"/><path d="M10 8v4M10 14.5v.5"/></svg><div><b>Cambios normativos</b><span>El reconocimiento de Aptis varía por comunidad y por convocatoria y puede cambiar.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--bad)"><path d="M10 3l8 14H2z"/><path d="M10 8v4M10 14.5v.5"/></svg><div><b>Anuncios con más presupuesto</b><span>Las academias grandes pueden pujar por «curso Aptis online». Compite el nicho, no el término genérico.</span></div></li>
+        </ul>
+      </div>
+      <div class="q o">
+        <h3><span class="tag">O</span>Oportunidades</h3>
+        <ul>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--brand)"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.5"/></svg><div><b>Opositores y docentes bilingües</b><span>Necesitan un certificado concreto y tienen fecha. Aptis Advanced se reconoce en Andalucía desde 2025.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--brand)"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.5"/></svg><div><b>Corrección humana de speaking y writing</b><span>Las guías del propio sector recuerdan que los simulacros y la IA no sustituyen a un profesor.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--brand)"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.5"/></svg><div><b>SEO por perfil y por comunidad</b><span>Páginas como «Aptis B2 para oposiciones» o «Aptis para Policía Nacional» tienen menos competencia que el término general.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--brand)"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.5"/></svg><div><b>Embudo con simulacro gratuito</b><span>Captar el contacto con un simulacro y cerrar la venta por email, apoyado en su CRM.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 MAPA -->
+  <section class="panel" id="p5" role="tabpanel" aria-labelledby="t5" hidden>
+    <div>
+      <h2>Mapa de posicionamiento</h2>
+      <p class="lede">Precio frente a especialización. El tamaño de cada burbuja indica la presencia digital estimada.</p>
+    </div>
+    <div class="chartbox"><div class="chartwrap"><canvas id="bubble" role="img" aria-label="Mapa de burbujas con precio en el eje horizontal y especialización en el vertical"></canvas></div></div>
+    <p class="method"><span class="est">Est.</span> Posiciones estimadas con la información pública disponible. Todos los rivales analizados se concentran en alta especialización, de modo que el hueco está en el precio y en el formato (trato individual), no en el tema del examen.</p>
+  </section>
+
+  <!-- 6 VISIBILIDAD -->
+  <section class="panel" id="p6" role="tabpanel" aria-labelledby="t6" hidden>
+    <div>
+      <h2>Cuota de visibilidad digital</h2>
+      <p class="lede">Reparto estimado de la visibilidad online entre los analizados para búsquedas de preparación de Aptis. English with Lidia no apareció en ninguna de las búsquedas hechas, de ahí su cuota baja.</p>
+    </div>
+    <div class="chartbox"><div class="chartwrap"><canvas id="donut" role="img" aria-label="Gráfico de donut con la cuota de visibilidad digital estimada de cada empresa"></canvas></div></div>
+    <p class="method"><span class="est">Est.</span> <b>Método:</b> reparto subjetivo a partir de cuántas veces y con qué prominencia aparece cada empresa en las búsquedas hechas para este estudio, de su presencia en directorios (Emagister, Classgap, Superprof) y del tamaño de su oferta. No son datos de tráfico. Para confirmarlos hacen falta Semrush o Ahrefs y la Search Console de Lidia.</p>
+  </section>
+
+  <!-- 7 RECOMENDACIONES -->
+  <section class="panel" id="p7" role="tabpanel" aria-labelledby="t7" hidden>
+    <div>
+      <h2>Recomendaciones estratégicas</h2>
+      <p class="lede">Ordenadas por prioridad. Los resultados de SEO y de publicidad tardan en consolidarse: conviene hablar de tendencias a 3–6 meses, no de promesas.</p>
+    </div>
+    <div class="recs">
+      <article class="rec">
+        <div class="meta"><span class="pill alta">Prioridad alta</span><span class="pill plazo">Inmediato</span></div>
+        <h3>Medir antes de invertir: Search Console, GA4 y seguimiento de ventas</h3>
+        <p>Conectar Search Console y GA4 a la web y registrar como conversión la compra de WooCommerce y el envío de formularios. Sin eso no se puede saber qué anuncio o qué página vende.</p>
+        <p class="imp"><b>Impacto:</b> da la línea base real de posiciones, tráfico y coste por alumno.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill alta">Prioridad alta</span><span class="pill plazo">Inmediato</span></div>
+        <h3>Centrar todo el mensaje en el título y la fecha, no en el inglés</h3>
+        <p>Quien compra necesita aprobar un examen concreto para una oposición, una bolsa o un puesto, con una fecha límite. No busca aprender inglés. La home abre con «el inglés que necesitas se consigue en semanas». Conviene que el titular, las landings y los anuncios hablen del resultado: «tu Aptis B2 aprobado para tu oposición, antes de la convocatoria», apoyado en la garantía y en las comunidades que lo reconocen.</p>
+        <p class="imp"><b>Impacto:</b> el mensaje coincide con lo que la gente busca y con lo que escribe en Google, y mejora la calidad de los anuncios y la conversión.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill alta">Prioridad alta</span><span class="pill plazo">1–3 meses</span></div>
+        <h3>SEO on-page de la home y landings por perfil</h3>
+        <p>El titular de la home es emocional y las palabras «Aptis ESOL» solo aparecen en una etiqueta pequeña encima. Revisar title, H1 y meta description para que incluyan «preparación Aptis ESOL». Comprobar si la FAQ lleva marcado FAQPage. Después, crear páginas por intención: opositores, docentes bilingües, B2, C1 y Policía Nacional.</p>
+        <p class="imp"><b>Impacto:</b> tráfico cualificado con menos competencia que «curso Aptis online». Las mismas páginas sirven de destino para los anuncios.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill alta">Prioridad alta</span><span class="pill plazo">1–3 meses</span></div>
+        <h3>Campaña de Google Ads de búsqueda, pequeña y por nicho</h3>
+        <p>Empezar con unos pocos grupos de anuncios (oposiciones, B2, C1, marca) hacia las landings nuevas, con palabras negativas y presupuesto de prueba. La conversión objetivo es la solicitud de diagnóstico. Antes de anunciar «92 % de aprobados», disponer de datos que lo respalden, porque las plataformas piden justificar este tipo de afirmaciones. Lo mismo vale para la garantía de aprobado, los precios tachados y el aviso de «quedan 12 plazas»: comprobar que sean reales y cumplan la normativa de rebajas y publicidad.</p>
+        <p class="imp"><b>Impacto:</b> resultados visibles antes que el SEO, con riesgo acotado.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill alta">Prioridad alta</span><span class="pill plazo">1–3 meses</span></div>
+        <h3>Campañas en Meta dirigidas a quien necesita aprobar sí o sí</h3>
+        <p>Google capta a quien ya busca; Meta llega a la persona antes de que busque, así que funciona mejor con un mensaje de urgencia y una oferta clara: reservar el diagnóstico gratuito o solicitar plaza. Segmentos de partida: opositores y docentes, personas que preparan procesos como Policía Nacional y profesionales que necesitan certificar su nivel. Añadir una campaña de remarketing para quien visitó la web o empezó el formulario sin terminarlo. Creatividades: vídeos de aprobados y piezas cortas del tipo «tu Aptis B2 para tu oposición», con la fecha de convocatoria. Destino: la landing por perfil, con formulario o WhatsApp.</p>
+        <p>Antes de lanzar: instalar el píxel de Meta y la API de conversiones, y tener Instagram y Facebook con contenido, porque quien ve el anuncio entra a mirar el perfil. Revisar cómo se redacta la garantía de aprobado, ya que las políticas de anuncios limitan las promesas de resultados. Hay que dejar varias semanas de aprendizaje antes de optimizar.</p>
+        <p class="imp"><b>Impacto:</b> solicitudes de diagnóstico con coste medible y una vía para recuperar a quien no se decidió a la primera.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill alta">Prioridad alta</span><span class="pill plazo">1–3 meses</span></div>
+        <h3>Sesión gratuita en directo como puerta de entrada</h3>
+        <p>Invitar, desde los anuncios y la web, a entrar gratis en la comunidad y asistir a la próxima sesión online en grupo, solo como oyente y sin intervenir. Un registro rápido (nombre, email, WhatsApp, oposición o puesto, nivel y fecha de examen) deja el contacto en el CRM y permite segmentar. La sesión puede ser un examen real resuelto en directo, explicando cómo se puntúan el writing y el speaking. Al terminar, una oferta con plazo: diagnóstico gratuito o plaza con garantía.</p>
+        <p>Lo que más valor tiene (corrección individual, speaking 1 a 1, feedback personal) se reserva para los programas de pago, de modo que la sesión demuestra el método sin regalarlo. Comprobar antes si Lidia ya hace sesiones gratuitas y cuánta gente hay en su comunidad. Hoy la comunidad de WhatsApp aparece como ventaja de los programas de pago, así que conviene una comunidad o canal gratuito aparte. Pedir consentimiento expreso para escribir por WhatsApp y email.</p>
+        <p class="imp"><b>Impacto:</b> un contacto más barato que el diagnóstico, porque exige menos compromiso, y que llega más calentado a la venta. Medir registros, asistentes, diagnósticos solicitados y ventas.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill media">Prioridad media</span><span class="pill plazo">1–3 meses</span></div>
+        <h3>Seguimiento automático tras el formulario de diagnóstico</h3>
+        <p>La web ya capta solicitudes. Falta una respuesta inmediata por email y WhatsApp, una secuencia que lleve de diagnóstico a programa y un recordatorio a quien no reserva. Los «Recursos gratuitos» pueden servir de segunda puerta de entrada para quien aún no está listo.</p>
+        <p class="imp"><b>Impacto:</b> más contactos convertidos sin aumentar el gasto en tráfico, apoyado en el CRM de Lidera tu Negocio.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill media">Prioridad media</span><span class="pill plazo">1–3 meses</span></div>
+        <h3>Ficha de Google Business Profile y reseñas verificables</h3>
+        <p>La web muestra reseñas con el logo de Google, pero no enlaza ninguna ficha de Google Business Profile y no se encuentra una en Maps ni en las búsquedas. Primero hay que saber de dónde vienen: puede ser una ficha sin dirección pública (negocio de servicios) o un widget con reseñas copiadas a mano, que sería un riesgo. Después, crear o reclamar la ficha, enlazarla desde la web y pedir reseñas de forma sistemática tras cada aprobado. Completar con casos por perfil (docente, policía, profesional).</p>
+        <p class="imp"><b>Impacto:</b> refuerza la confianza en la web y mejora el porcentaje de clics en los anuncios.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill media">Prioridad media</span><span class="pill plazo">3–6 meses</span></div>
+        <h3>Blog y vídeo educativos sobre el examen</h3>
+        <p>Contenido útil: diferencias entre B2 y C1, errores típicos de writing, cómo se puntúa el speaking. Se reutiliza en Instagram y TikTok con piezas cortas y variadas.</p>
+        <p class="imp"><b>Impacto:</b> autoridad temática y tráfico orgánico sostenido.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill media">Prioridad media</span><span class="pill plazo">1–3 meses</span></div>
+        <h3>LinkedIn solo como perfil profesional, sin inversión en anuncios</h3>
+        <p>El perfil de LinkedIn publica quizzes sin respuestas: con poca audiencia, las encuestas no funcionan. Reorientarlo hacia el resultado, con un titular como «Preparación Aptis B1, B2 y C1 para oposiciones y promoción», y publicar contenido breve que resuelva dudas reales (qué comunidad reconoce qué título, errores típicos de writing, plazos). Es el canal natural para el programa English for Executives y para profesionales que necesitan certificar su nivel. La inversión publicitaria irá a Meta y no a LinkedIn: el perfil sirve de escaparate de credibilidad y se alimenta de forma orgánica, con poco esfuerzo.</p>
+        <p class="imp"><b>Impacto:</b> refuerza la credibilidad ante perfiles profesionales y abre el segmento Executives sin gasto en anuncios.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill baja">Prioridad baja</span><span class="pill plazo">3–6 meses</span></div>
+        <h3>Separar mensajes para docentes y para otros perfiles</h3>
+        <p>La home habla a docentes y, más abajo, a quien no lo es. En anuncios conviene un mensaje y una landing para cada perfil, y dejar claro qué programa y qué precio corresponde a cada uno.</p>
+        <p class="imp"><b>Impacto:</b> anuncios más precisos y menos abandono en la página.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill media">Prioridad media</span><span class="pill plazo">Inmediato</span></div>
+        <h3>Quitar los enlaces a redes sin actividad</h3>
+        <p>El pie de la web enlaza a varias redes y al menos el perfil de TikTok no tiene publicaciones ni seguidores. Un perfil vacío resta credibilidad a una web que vende confianza. Decidir qué redes mantendrá de verdad (por ejemplo una o dos), enlazar solo esas y ocultar el resto hasta que tengan contenido.</p>
+        <p class="imp"><b>Impacto:</b> mejora inmediata de la imagen, sin coste, y centra el esfuerzo de contenido en una red.</p>
+      </article>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h3>Fuentes</h3>
+        <ul class="sources">
+          <li><a href="https://aptisprepare.com/cursos/intensivos/">Aptis Prepare, cursos intensivos</a></li>
+          <li><a href="https://blueparrotschool.com/product/aptis-general-b1-b2-c1-28h/">Blue Parrot School, Aptis 28 h</a></li>
+          <li><a href="https://readygotraining.com/curso-ingles-aptis-esol/">Ready Go Training, curso Aptis</a></li>
+          <li><a href="https://www.britishcouncil.es/cursos-ingles/aptis">British Council España, cursos Aptis</a></li>
+          <li><a href="https://es.trustpilot.com/review/aptisacademia.com">Aptis Academia en Trustpilot</a></li>
+          <li><a href="https://academiahermes.es/producto/clases-online-aptis">Academia Hermes, clases online Aptis</a></li>
+          <li><a href="https://www.emagister.com/aptis-general-advanced-cursos-3670903.htm">Emagister, Aptis General y Advanced</a></li>
+          <li><a href="https://www.educaciontrespuntocero.com/formacion-docente/aptis-esol-examen-de-ingles/">Educación 3.0, Aptis Advanced en Andalucía</a></li>
+          <li><a href="https://opencourser.com/course/fqlyq8/1-aptis-advanced-c1-c2-certificado-oficial">Academia Learning, reconocimiento por comunidades</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  var DIMS=['Presencia digital','Reputación online','Rango de precios','Amplitud de servicios','Especialización','Experiencia web'];
+  var C=[
+    {id:'lidia',name:'English with Lidia',client:true,url:'https://englishwithlidia.es',loc:'Online · Soria',
+     serv:'Aptis ESOL B1, B2 y C1 con método NeuroAptis Strategy, clases online. Tres programas: Express (10 h 1 a 1), Premium Academic (3 meses, directo y speaking) y Tutorizado (3 meses, 4 sesiones 1 a 1). Curso online a tu ritmo, simulacros reales, diagnóstico gratuito y garantía de aprobado.',
+     price:'Pago único por programa: Express 195 € (antes 295 €), Premium Academic 349 € (antes 549 €), Tutorizado 649 €. Fraccionable en 3 cuotas sin intereses. Curso a tu ritmo: N/D',priceNum:195,social:'Declara 30+ docentes aprobados y 92 % de tasa de aprobado (datos propios). Tres testimonios en vídeo y reseñas de Google con 5 estrellas (nº total N/D). Enlaces a varias redes en el pie, al menos una (TikTok) sin seguidores ni publicaciones. Actividad real en el resto: N/D. LinkedIn (/in/englishwithlidia): publica quizzes sin respuestas.',
+     dif:'Método propio, sello de centro colaborador del British Council y embudo de diagnóstico gratuito ya montado.',src:'Captura de la home',s:[7,7,5,5,9,8],x:5,y:9,share:6},
+    {id:'prepare',name:'Aptis Prepare',url:'https://aptisprepare.com',loc:'Online · España',
+     serv:'Intensivos de 8 semanas y 24 h en directo por Zoom, máx. 10 alumnos, clases grabadas; planes a tu ritmo mensual o semestral.',
+     price:'N/D',priceNum:0,social:'Afirma +97 % de aprobados (dato propio). Aparece primero en un ranking publicado como nota de prensa.',
+     dif:'Solo Aptis, centro asociado del British Council, directo y grabado.',src:'aptisprepare.com',s:[9,7,4,7,10,8],x:4,y:10,share:29},
+    {id:'academia',name:'Aptis Academia',url:'https://es.trustpilot.com/review/aptisacademia.com',loc:'Plataforma online',
+     serv:'Más de 4.000 ejercicios, simulacros completos, 80 lecciones de gramática en español, listening propio.',
+     price:'Gratis con un simulacro al mes; planes N/D',priceNum:0,social:'Trustpilot sin reseñas.',
+     dif:'Plataforma de práctica con versión gratuita.',src:'Trustpilot',s:[7,3,3,6,10,8],x:3,y:10,share:10},
+    {id:'blue',name:'Blue Parrot School',url:'https://blueparrotschool.com/product/aptis-general-b1-b2-c1-28h/',loc:'Online y presencial',
+     serv:'28 h en directo B1–B2–C1, clases grabadas, materiales incluidos, por Teams.',
+     price:'N/D',priceNum:0,social:'Varias reseñas positivas en su ficha y una que critica clases genéricas y poco orientadas al examen.',
+     dif:'Intensivo de 28 horas en directo.',src:'blueparrotschool.com',s:[7,6,5,5,8,6],x:5,y:8,share:12},
+    {id:'ready',name:'Ready Go Training',url:'https://readygotraining.com/curso-ingles-aptis-esol/',loc:'Online',
+     serv:'Método Sticky, 3 h de clase grupal en directo por semana, plataforma con tests y simulacros; plan mensual o intensivo de 4 semanas.',
+     price:'N/D',priceNum:0,social:'N/D',
+     dif:'Planes flexibles y centro colaborador del British Council.',src:'readygotraining.com',s:[6,5,6,6,9,7],x:6,y:9,share:11},
+    {id:'bc',name:'British Council España',url:'https://www.britishcouncil.es/cursos-ingles/aptis',loc:'Online y presencial',
+     serv:'Cursos de 10, 20 y 25 h (Destino Aptis ESOL), niveles A2, General y Advanced.',
+     price:'N/D',priceNum:0,social:'N/D',
+     dif:'Es el creador del examen.',src:'britishcouncil.es',s:[10,9,8,7,6,8],x:8,y:6,share:25},
+    {id:'belingual',name:'Belingual',url:'https://es.scribd.com/document/1064577474/unit1',loc:'Online y presencial · Andalucía',
+     serv:'Cursos intensivos con tres simulacros finales con jefa de estudios.',
+     price:'N/D',priceNum:0,social:'Se presenta como la primera academia de Andalucía en trabajar este examen (autodescripción).',
+     dif:'Experiencia local y simulacros presenciales.',src:'Material del curso',s:[5,5,6,6,8,5],x:6,y:8,share:7}
+  ];
+
+  function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();}
+  function col(){return {brand:css('--brand'),ink:css('--ink'),muted:css('--muted'),line:css('--line'),surface:css('--surface'),
+    n:[css('--n1'),css('--n2'),css('--n3'),css('--n4'),css('--n6'),css('--n5')]};}
+
+  var charts={};
+  function kill(k){if(charts[k]){charts[k].destroy();charts[k]=null;}}
+
+  /* Radar */
+  var chipBox=document.getElementById('radarChips');
+  var radarOn={};
+  C.forEach(function(c,i){
+    if(c.client)return;
+    var l=document.createElement('label');
+    l.innerHTML='<input type="checkbox" id="chk-'+c.id+'"> '+c.name;
+    l.querySelector('input').addEventListener('change',function(e){radarOn[c.id]=e.target.checked;drawRadar();});
+    chipBox.appendChild(l);
+  });
+  function avgComp(){
+    var comps=C.filter(function(c){return !c.client;});
+    return DIMS.map(function(_,d){return +(comps.reduce(function(a,c){return a+c.s[d];},0)/comps.length).toFixed(1);});
+  }
+  function drawRadar(){
+    kill('radar');var k=col();
+    var ds=[{label:'English with Lidia',data:C[0].s,borderColor:k.brand,backgroundColor:k.brand+'33',borderWidth:4,pointRadius:4,pointBackgroundColor:k.brand},
+            {label:'Media de competidores',data:avgComp(),borderColor:k.muted,backgroundColor:'transparent',borderWidth:2,borderDash:[6,4],pointRadius:0}];
+    var n=0;
+    C.forEach(function(c){ if(c.client||!radarOn[c.id])return;
+      ds.push({label:c.name,data:c.s,borderColor:k.n[n%k.n.length],backgroundColor:'transparent',borderWidth:1.5,pointRadius:2,borderDash:n%2?[2,3]:[]});n++;});
+    charts.radar=new Chart(document.getElementById('radar'),{type:'radar',data:{labels:DIMS,datasets:ds},
+      options:{responsive:true,maintainAspectRatio:false,
+        scales:{r:{min:0,max:10,ticks:{stepSize:2,color:k.muted,backdropColor:'transparent'},grid:{color:k.line},angleLines:{color:k.line},pointLabels:{color:k.ink,font:{size:13,family:"'Source Sans 3',sans-serif"}}}},
+        plugins:{legend:{labels:{color:k.ink,usePointStyle:true}},tooltip:{callbacks:{label:function(x){return x.dataset.label+': '+x.formattedValue+' (est.)';}}}}}});
+  }
+
+  /* Bubble */
+  var namePlugin={id:'names',afterDatasetsDraw:function(ch){
+    var k=col(),ctx=ch.ctx;ctx.save();ctx.font="600 12px 'Source Sans 3',sans-serif";ctx.textAlign='center';
+    ch.data.datasets.forEach(function(d,i){var m=ch.getDatasetMeta(i);m.data.forEach(function(el,j){
+      var pt=d.data[j];ctx.fillStyle=d.isClient?k.brand:k.ink;ctx.fillText(pt.label,el.x,el.y-(pt.r+6));});});ctx.restore();}};
+  function drawBubble(){
+    kill('bubble');var k=col();
+    // separar puntos que coinciden en coordenadas
+    var seen={};
+    var ds=C.map(function(c,i){
+      var key=c.x+'-'+c.y;seen[key]=(seen[key]||0)+1;var off=(seen[key]-1)*0.35;
+      return {label:c.name,isClient:!!c.client,data:[{x:c.x+off,y:c.y-off*0.6,r:c.s[0]*2.1,label:c.name}],
+        backgroundColor:c.client?k.brand+'CC':k.n[i%k.n.length]+'88',borderColor:c.client?k.brand:k.n[i%k.n.length],borderWidth:c.client?3:1.5};});
+    charts.bubble=new Chart(document.getElementById('bubble'),{type:'bubble',data:{datasets:ds},plugins:[namePlugin],
+      options:{responsive:true,maintainAspectRatio:false,layout:{padding:{top:26,right:20}},
+        scales:{x:{min:0,max:10,title:{display:true,text:'Precio (bajo → alto), estimado',color:k.muted},ticks:{color:k.muted},grid:{color:k.line}},
+                y:{min:3,max:11.5,title:{display:true,text:'Especialización (generalista → especialista), estimada',color:k.muted},ticks:{color:k.muted,stepSize:1,callback:function(v){return v>10?'':v;}},grid:{color:k.line}}},
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:function(x){return x.dataset.label+' (estimado)';}}}}}});
+  }
+
+  /* Donut */
+  function drawDonut(){
+    kill('donut');var k=col();
+    var palette=[k.brand].concat(k.n);
+    charts.donut=new Chart(document.getElementById('donut'),{type:'doughnut',
+      data:{labels:C.map(function(c){return c.name;}),datasets:[{data:C.map(function(c){return c.share;}),
+        backgroundColor:C.map(function(c,i){return i===0?k.brand:k.n[(i-1)%k.n.length];}),borderColor:k.surface,borderWidth:3}]},
+      options:{responsive:true,maintainAspectRatio:false,cutout:'58%',
+        plugins:{legend:{position:'right',labels:{color:k.ink,usePointStyle:true,padding:14}},
+          tooltip:{callbacks:{label:function(x){return x.label+': ≈'+x.formattedValue+' % (est.)';}}}}}});
+  }
+
+  /* Tabla */
+  var tb=document.querySelector('#cmp tbody');
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function drawTable(rows){
+    tb.innerHTML=rows.map(function(c){
+      return '<tr'+(c.client?' class="client"':'')+'><td><span class="nm"><a href="'+c.url+'" target="_blank" rel="noopener">'+esc(c.name)+'</a></span>'+(c.client?'<br><span class="pill plazo">Cliente</span>':'')+'</td>'+
+      '<td>'+esc(c.loc)+'</td><td>'+esc(c.serv)+'</td><td>'+esc(c.price)+'</td><td>'+esc(c.social)+'</td><td>'+esc(c.dif)+'</td><td><span class="src">'+esc(c.src)+'</span></td></tr>';}).join('');
+  }
+  var sortState={k:null,asc:true};
+  document.querySelectorAll('#cmp th button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var key=b.getAttribute('data-k');sortState.asc=sortState.k===key?!sortState.asc:true;sortState.k=key;
+      var rows=C.slice().sort(function(a,z){
+        if(a.client)return -1;if(z.client)return 1;
+        var av=a[key],zv=z[key];var r=(typeof av==='number')?av-zv:String(av).localeCompare(String(zv),'es');
+        return sortState.asc?r:-r;});
+      drawTable(rows);});
+  });
+  drawTable(C);
+
+  /* Pestañas */
+  var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+  var draw={p2:drawRadar,p5:drawBubble,p6:drawDonut};
+  var current='p1';
+  function show(id){
+    current=id;
+    tabs.forEach(function(t){var on=t.getAttribute('aria-controls')===id;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden=!on;});
+    if(draw[id])draw[id]();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){show(t.getAttribute('aria-controls'));});
+    t.addEventListener('keydown',function(e){
+      var n=null;if(e.key==='ArrowRight')n=tabs[(i+1)%tabs.length];if(e.key==='ArrowLeft')n=tabs[(i-1+tabs.length)%tabs.length];
+      if(n){n.focus();n.click();e.preventDefault();}});
+  });
+
+  /* Cambio de tema */
+  function rethemed(){if(draw[current])draw[current]();}
+  try{window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',rethemed);}catch(e){}
+  new MutationObserver(rethemed).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+})();
+</script>
+</body>
+</html>
