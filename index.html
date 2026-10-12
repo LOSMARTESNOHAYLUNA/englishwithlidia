@@ -1,21 +1,8 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Estudio English with Lidia</title>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Estudio English with Lidia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap">
-<style>
-:root{color-scheme:light}
-html{-webkit-text-size-adjust:100%}
-body{margin:0}
-img{max-width:100%}
-[hidden]{display:none!important}
-</style>
-<style>
+<style>:root{color-scheme:light}html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body><style>
 /* Layout: cabecera con ficha del cliente, pestañas horizontales y un panel por sección; la empresa analizada usa siempre el color de marca y los competidores la escala neutra. */
 :root{
   --bg:#F1F4F6; --surface:#FFFFFF; --ink:#12202B; --muted:#566874; --line:#D6DEE4;
@@ -112,6 +99,22 @@ td .nm{font-weight:700;font-family:var(--font-display)}
 .rec p{color:var(--muted);font-size:.93rem}
 .rec .imp{font-size:.9rem}
 .rec .imp b{font-weight:700}
+.rec ul{margin:0;padding-left:20px;color:var(--muted);font-size:.93rem;display:flex;flex-direction:column;gap:4px}
+table.tbl{min-width:680px}
+td.num,th.num{text-align:right;white-space:nowrap}
+td .bad{color:var(--bad);font-weight:700}
+td .good{color:var(--good);font-weight:700}
+.step{display:grid;grid-template-columns:44px 1fr;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font:700 1.25rem var(--font-display)}
+.step .body{display:flex;flex-direction:column;gap:12px;min-width:0}
+.step h3{font-size:1.15rem}
+.step p{color:var(--muted);font-size:.95rem}
+.step .big{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--ink)}
+.step .res{background:var(--brand-soft);border-left:3px solid var(--brand);padding:10px 14px;border-radius:0 4px 4px 0;font-size:.95rem}
+.step .res.bad{background:var(--bad-soft);border-left-color:var(--bad)}
+.step ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:.95rem}
+@media (max-width:520px){.step{grid-template-columns:1fr}}
+.kw{display:inline-block;font-family:var(--font-mono);font-size:.76rem;background:var(--bg);border:1px solid var(--line);border-radius:3px;padding:1px 6px;margin:2px 4px 2px 0}
 ol.q-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 .sources{font-size:.84rem;color:var(--muted);display:flex;flex-direction:column;gap:4px;margin:0;padding-left:18px}
 .method{font-size:.88rem;color:var(--muted);max-width:80ch}
@@ -119,8 +122,7 @@ ol.q-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 @media (max-width:520px){ .chartwrap{height:360px} }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
-</head>
-<body>
+
 <div class="wrap">
   <header class="top">
     <div>
@@ -131,7 +133,8 @@ ol.q-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
     <div class="facts">
       <span><b>Web</b> englishwithlidia.es</span>
       <span><b>Instagram</b> @englishwithlidiasoria</span>
-      <span><b>Zona</b> Soria · online en toda España</span>
+      <span><b>Zona</b> Mallorca · online en toda España</span>
+      <span><b>Versión</b> 12 de octubre de 2026, con la reunión, precios, AG Academy y palabras clave</span>
     </div>
   </header>
 
@@ -142,37 +145,49 @@ ol.q-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
     <button role="tab" id="t4" aria-selected="false" aria-controls="p4" tabindex="-1">DAFO</button>
     <button role="tab" id="t5" aria-selected="false" aria-controls="p5" tabindex="-1">Posicionamiento</button>
     <button role="tab" id="t6" aria-selected="false" aria-controls="p6" tabindex="-1">Visibilidad</button>
+    <button role="tab" id="t8" aria-selected="false" aria-controls="p8" tabindex="-1">Precios</button>
+    <button role="tab" id="t9" aria-selected="false" aria-controls="p9" tabindex="-1">Palabras clave</button>
     <button role="tab" id="t7" aria-selected="false" aria-controls="p7" tabindex="-1">Recomendaciones</button>
   </nav>
 
   <!-- 1 RESUMEN -->
   <section class="panel" id="p1" role="tabpanel" aria-labelledby="t1">
     <div class="grid g4">
-      <div class="card"><span class="k">Competidores analizados</span><span class="v">6</span><p>Academias y plataformas online de Aptis ESOL con oferta visible en España.</p></div>
+      <div class="card"><span class="k">Competidores analizados</span><span class="v">7</span><p>Academias y plataformas online de Aptis ESOL con oferta visible en España.</p></div>
       <div class="card"><span class="k">Fortaleza del mercado</span><span class="v">Media-alta</span><p>Hay centros asociados al British Council, plataformas 24/7 y planes mensuales. A la vez, el nicho está fragmentado y las reseñas son escasas.</p></div>
-      <div class="card"><span class="k">Principal amenaza</span><span class="v">Aptis Prepare</span><p>Se presenta como centro asociado del British Council, combina clases en directo y a tu ritmo, y aparece en rankings propios.</p></div>
-      <div class="card client"><span class="k">Principal oportunidad</span><span class="v">Más tráfico a una web que ya convierte</span><p>La web ya tiene prueba social, FAQ y formulario de diagnóstico. Falta llevarle visitas cualificadas con SEO por perfil y Google Ads.</p></div>
+      <div class="card"><span class="k">Principal amenaza</span><span class="v">AG Academy</span><p>El competidor que citó Lidia. Tiene embudo completo: masterclass y curso gratis, landings por segmento y anuncios. En búsqueda orgánica, la amenaza es Aptis Prepare, por su sello del British Council y su ranking propio.</p></div>
+      <div class="card client"><span class="k">Principal oportunidad</span><span class="v">Visibilidad para quien necesita aprobar</span><p>El producto, las primeras pruebas de confianza y el diagnóstico gratuito ya existen. Falta tráfico cualificado: Google Ads por segmento, SEO por perfil y una ficha de Google visible en toda España.</p></div>
     </div>
 
     <div class="grid g2">
       <div class="card">
         <h3>Qué es English with Lidia</h3>
-        <p>Una web de captación muy centrada en Aptis ESOL para docentes y también para otros perfiles. Titular emocional («Se consigue en semanas»), método NeuroAptis Strategy, 30+ docentes aprobados, 92 % de aprobados, testimonios en vídeo, reseñas de Google, FAQ de ocho preguntas y formulario para reservar un diagnóstico gratuito. Hay botón de WhatsApp, pestaña «Asegura tu plaza» y un sello de centro colaborador del British Council en el pie.</p>
-        <p><span class="src">Fuente: captura de la home. Cifras leídas de una imagen de baja resolución</span></p>
+        <p>Preparación online de Aptis ESOL a cargo de una docente con años de experiencia presencial en distintos centros. Es centro de registro del British Council: inscribe al alumno en el examen y recibe sus resultados. Tres programas: Express (puerta de entrada), Premium Academic (el producto principal) y Tutorizado. La web es nueva y sigue en construcción, por lo que programas y textos cambian de un día a otro.</p>
+        <p><span class="src">Fuente: reunión y web</span></p>
+      </div>
+      <div class="card">
+        <h3>Cómo se capta hoy</h3>
+        <p>La web aún no posiciona: al buscar «inglés Aptis» aparece la competencia y no ella. Los primeros contactos llegan por la búsqueda de marca (English with Lidia) y por mensajes directos, y se atienden por llamada. No hay campañas ni contenido en redes. Sí hay un vídeo promocional y testimonios en la web.</p>
+        <p><span class="src">Fuente: reunión</span></p>
+      </div>
+      <div class="card">
+        <h3>Quién compra hoy</h3>
+        <p>Los primeros contactos son universitarios que necesitan un B2 para terminar la carrera, y un docente. Los opositores, con Policía Nacional y Correos como ejemplos citados, son el segmento con más urgencia y fecha límite, aunque aún no son los que compran.</p>
+        <p><span class="src">Fuente: reunión</span> <span class="est">Muestra de 4 contactos</span></p>
       </div>
       <div class="card">
         <h3>Contexto de demanda</h3>
-        <p>La Junta de Andalucía reconoce Aptis ESOL Advanced para el profesorado bilingüe desde la Orden del 26 de marzo de 2025, y el examen se ha aprobado en procesos selectivos de la Policía Nacional. Otras fuentes hablan de 14 comunidades autónomas, pero ese dato lo afirma una academia. El reconocimiento depende de cada convocatoria.</p>
+        <p>La Junta de Andalucía reconoce Aptis ESOL Advanced para el profesorado bilingüe desde la Orden del 26 de marzo de 2025, y el examen se ha aprobado en procesos selectivos de la Policía Nacional. Otras fuentes hablan de 14 comunidades autónomas, dato que afirma una academia. El reconocimiento depende de cada convocatoria.</p>
         <p><span class="src">Fuente: Educación 3.0 · Academia Learning</span></p>
       </div>
       <div class="card">
-        <h3>Precios visibles en el mercado</h3>
-        <p>Lidia cobra <b>pago único por programa</b>: 195 € Express (10 h 1 a 1), 349 € Premium Academic y 649 € Tutorizado, con 3 cuotas sin intereses opcionales. En el mercado, un curso online de Aptis aparece a <b>270 €</b> (Academia Hermes, ficha de 2023) y a <b>340 € con IVA</b> (Emagister), y las plataformas de clases particulares pagan al profesor entre 15 y 30 €/hora. Su Premium queda en línea con el mercado y el Express sale a unos 19,5 €/hora en clases 1 a 1.</p>
-        <p><span class="src">Fuente: texto de su web · academiahermes.es · emagister.com</span></p>
+        <h3>Precios y números</h3>
+        <p>Pago único por programa, con 3 cuotas sin intereses: <b>195 €</b> Express, <b>349 €</b> Premium Academic y <b>649 €</b> Tutorizado. En el mercado se ven cursos online a <b>270 €</b> (Academia Hermes, ficha de 2023) y <b>340 € con IVA</b> (Emagister). Con 15 alumnos por ciclo de dos meses a 349 €, los ingresos publicados suman unos <b>5.235 €</b> por ciclo, alrededor de 2.600 € al mes, antes de sesiones, publicidad y gestión. Precios sin IVA, porque la formación está exenta. La pestaña <b>Precios</b> explica paso a paso cuántos alumnos necesita Lidia para pagar el marketing y qué precios propone.</p>
+        <p><span class="src">Fuente: web · reunión · academiahermes.es · emagister.com</span></p>
       </div>
       <div class="card">
         <h3>Qué falta por verificar</h3>
-        <p>Solo se ha podido ver una captura de la home. Faltan el precio del curso online a tu ritmo, el nº de reseñas de Google, los seguidores, el tráfico y las posiciones en Google, además de la lectura técnica de la web. Las puntuaciones del radar son estimaciones.</p>
+        <p>El análisis refleja la web entre el 6 y el 7 de octubre, y sigue cambiando. Quedan pendientes el precio del curso a tu ritmo en su ficha, el número de reseñas de Google, los seguidores de Instagram, el tráfico y las posiciones en Google. Las puntuaciones del radar son estimaciones.</p>
         <p><span class="est">Est.</span> marca cada cifra estimada; <span class="src">Fuente</span> marca cada dato contrastado.</p>
       </div>
     </div>
@@ -188,7 +203,7 @@ ol.q-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
       <div class="chips" id="radarChips" role="group" aria-label="Competidores en el radar"></div>
       <div class="chartwrap"><canvas id="radar" role="img" aria-label="Gráfico radar comparando English with Lidia con el mercado en seis dimensiones"></canvas></div>
     </div>
-    <p class="method"><span class="est">Est.</span> Todas las puntuaciones son estimaciones razonadas a partir de lo visto en sus webs y fichas. «Rango de precios» sube con el posicionamiento premium. Para Lidia, la experiencia web sale de la captura de la home y la reputación de sus testimonios y reseñas de Google visibles, con el nº de reseñas aún sin conocer.</p>
+    <p class="method"><span class="est">Est.</span> Todas las puntuaciones son estimaciones razonadas a partir de lo visto en sus webs y fichas. «Rango de precios» sube con el posicionamiento premium. Para Lidia, la presencia y la reputación reflejan que la web es nueva y aún no posiciona, que TikTok está vacío y que su ficha de Google no aparece en las búsquedas hechas; el resto sale de la web tal como estaba entre el 6 y el 7 de octubre.</p>
   </section>
 
   <!-- 3 TABLA -->
@@ -211,6 +226,51 @@ ol.q-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
         <tbody></tbody>
       </table>
     </div>
+    <div>
+      <h3>Ficha: AG Academy</h3>
+      <p class="lede" style="margin-top:6px">El competidor que mencionó Lidia en la reunión. Es la academia con el embudo de captación más trabajado de los analizados.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <h3>Cómo capta</h3>
+        <ul class="sources" style="font-size:.93rem">
+          <li><b>Regalo por registro:</b> una masterclass en directo gratuita («Código Aptis») y un curso gratuito de 4 clases («La Fórmula Aptis», con un valor declarado de 100 €), más una guía y tres exámenes completos.</li>
+          <li><b>Una landing por público:</b> hay una página específica para opositores de Educación Física, en colaboración con OposDeport, y otras con dirección web de anuncios. Es la estrategia de landings por perfil de la pestaña Recomendaciones.</li>
+          <li><b>Conversación por WhatsApp:</b> la web no muestra precios. Lleva al contacto a WhatsApp, a un chat asesor o a un test de nivel.</li>
+          <li><b>Urgencia y emoción:</b> plazas limitadas, fechas concretas y el coste de seguir sin el título.</li>
+          <li><b>Venta escalonada</b>, según describió Lidia: quien pide información de un programa recibe el tutorizado al precio del programa intermedio. Dato de la reunión, sin verificar.</li>
+        </ul>
+        <p><span class="src">Fuente: agacademyaptis.com · reunión</span></p>
+      </div>
+      <div class="card">
+        <h3>Su oferta y su prueba social</h3>
+        <ul class="sources" style="font-size:.93rem">
+          <li><b>Oferta:</b> Aptis, Trinity y Oxford, online y presencial, con más de 25 h mensuales en directo y más de 500 lecciones grabadas. Libro propio.</li>
+          <li><b>Cifras propias:</b> más de 6.000 alumnos certificados, 94 % de aprobados, 5,0 en Google y libro «n.º 1 en Amazon». Sin datos de respaldo.</li>
+          <li><b>Garantía:</b> reembolso en 15 días y, si se siguen las indicaciones y no se aprueba, pago de la matrícula del examen hasta obtener el título. Sin condiciones detalladas.</li>
+          <li><b>Incoherencias:</b> habla de 5.000 y de 6.000 alumnos, de 10 y de 15 años de experiencia, y de una masterclass de 90 minutos y de 4 horas. Hay texto de plantilla en el pie.</li>
+        </ul>
+        <p><span class="src">Fuente: agacademyaptis.com</span> <span class="est">Cifras no verificadas</span></p>
+      </div>
+      <div class="card client">
+        <h3>Qué puede aprender Lidia</h3>
+        <ul class="sources" style="font-size:.93rem">
+          <li>Una pieza gratuita que aporte valor y capte contactos, en directo o en curso corto, con consentimiento para escribirles después.</li>
+          <li>Una página de captación por perfil, con el mismo mensaje que el anuncio.</li>
+          <li>Una oferta escalonada, con el programa tutorizado como ascenso natural del curso.</li>
+          <li>Un seguimiento rápido por WhatsApp a quien pide información.</li>
+        </ul>
+      </div>
+      <div class="card client">
+        <h3>Dónde se diferencia Lidia</h3>
+        <ul class="sources" style="font-size:.93rem">
+          <li><b>Formación y trato:</b> filóloga inglesa con años de docencia, atención individual y método propio. La web de AG Academy no detalla titulaciones y habla de grupos reducidos.</li>
+          <li><b>Transparencia:</b> sus precios están publicados y las cuotas son sin intereses. AG Academy no muestra los suyos.</li>
+          <li><b>Centro de registro del British Council:</b> inscribe al alumno y recibe sus resultados, un respaldo verificable que conviene destacar frente a quien no lo muestra.</li>
+          <li><b>Cifras con respaldo:</b> con un registro propio de aprobados, Lidia puede anunciar menos y demostrar más.</li>
+        </ul>
+      </div>
+    </div>
     <p class="method">Instagram, Facebook, LinkedIn y Google Business Profile de los competidores no se han revisado: las plataformas bloquean la consulta automática. Conviene mirar sus perfiles antes de cerrar la propuesta.</p>
   </section>
 
@@ -224,10 +284,10 @@ ol.q-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
       <div class="q f">
         <h3><span class="tag">F</span>Fortalezas de Lidia</h3>
         <ul>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--good)"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Método con nombre propio</b><span>NeuroAptis Strategy es un enfoque que ninguna academia revisada usa, y lo repite toda la web.</span></div></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--good)"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Prueba social visible</b><span>Testimonios en vídeo, reseñas de Google con 5 estrellas y cifras de aprobados (propias, a respaldar con datos).</span></div></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--good)"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Embudo de captación ya montado</b><span>Diagnóstico gratuito, formulario, WhatsApp, prueba de 7 días, garantía de aprobado (acceso gratis hasta obtener el título) y recursos gratuitos. Ninguna otra academia revisada ofrece esa garantía.</span></div></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--good)"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Web indexada, con tienda y sello del British Council</b><span>Aparece en Google con el operador site, su robots.txt permite rastrear y tiene WooCommerce. En el pie lleva un sello de centro colaborador, que conviene confirmar.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--good)"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Experiencia docente real</b><span>Años de clases presenciales en distintos centros y una tasa de éxito alta. Son cifras propias, a respaldar con datos.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--good)"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Centro de registro del British Council</b><span>Inscribe al alumno en el examen y recibe sus resultados, por lo que sabe quién aprueba y puede acompañarlo hasta el final.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--good)"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Método con nombre propio y trato individual</b><span>NeuroAptis Strategy es un enfoque que ninguna academia revisada usa, con sesiones de speaking 1 a 1.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--good)"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Oferta escalonada y embudo ya montado</b><span>Tres programas, diagnóstico gratuito, WhatsApp, prueba de 7 días y acceso ampliado hasta aprobar.</span></div></li>
         </ul>
       </div>
       <div class="q d">
@@ -242,19 +302,20 @@ ol.q-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
       <div class="q a">
         <h3><span class="tag">A</span>Amenazas</h3>
         <ul>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--bad)"><path d="M10 3l8 14H2z"/><path d="M10 8v4M10 14.5v.5"/></svg><div><b>Centros asociados al British Council</b><span>Aptis Prepare y Ready Go se presentan con ese sello, que da confianza inmediata.</span></div></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--bad)"><path d="M10 3l8 14H2z"/><path d="M10 8v4M10 14.5v.5"/></svg><div><b>Práctica gratuita online</b><span>Aptis Academia regala un simulacro al mes y existen simuladores gratuitos y herramientas de IA.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--bad)"><path d="M10 3l8 14H2z"/><path d="M10 8v4M10 14.5v.5"/></svg><div><b>Centros asociados con marketing consolidado</b><span>Aptis Prepare y Ready Go se presentan con el sello del British Council y tienen años de posicionamiento.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--bad)"><path d="M10 3l8 14H2z"/><path d="M10 8v4M10 14.5v.5"/></svg><div><b>Competidor con embudo completo</b><span>AG Academy capta con masterclass y curso gratis, landings por perfil y anuncios, y declara más de 6.000 alumnos certificados (cifra propia).</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--bad)"><path d="M10 3l8 14H2z"/><path d="M10 8v4M10 14.5v.5"/></svg><div><b>Formación gratuita o subvencionada</b><span>Algunos centros presenciales la ofrecen, y el alumno cercano puede elegirla en lugar de pagar un curso online.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--bad)"><path d="M10 3l8 14H2z"/><path d="M10 8v4M10 14.5v.5"/></svg><div><b>Academias con audiencia en redes y programas más caros</b><span>Quien ya tiene audiencia convierte con menos esfuerzo, y fija expectativas de precio más altas.</span></div></li>
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--bad)"><path d="M10 3l8 14H2z"/><path d="M10 8v4M10 14.5v.5"/></svg><div><b>Cambios normativos</b><span>El reconocimiento de Aptis varía por comunidad y por convocatoria y puede cambiar.</span></div></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--bad)"><path d="M10 3l8 14H2z"/><path d="M10 8v4M10 14.5v.5"/></svg><div><b>Anuncios con más presupuesto</b><span>Las academias grandes pueden pujar por «curso Aptis online». Compite el nicho, no el término genérico.</span></div></li>
         </ul>
       </div>
       <div class="q o">
         <h3><span class="tag">O</span>Oportunidades</h3>
         <ul>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--brand)"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.5"/></svg><div><b>Opositores y docentes bilingües</b><span>Necesitan un certificado concreto y tienen fecha. Aptis Advanced se reconoce en Andalucía desde 2025.</span></div></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--brand)"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.5"/></svg><div><b>Corrección humana de speaking y writing</b><span>Las guías del propio sector recuerdan que los simulacros y la IA no sustituyen a un profesor.</span></div></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--brand)"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.5"/></svg><div><b>SEO por perfil y por comunidad</b><span>Páginas como «Aptis B2 para oposiciones» o «Aptis para Policía Nacional» tienen menos competencia que el término general.</span></div></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--brand)"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.5"/></svg><div><b>Embudo con simulacro gratuito</b><span>Captar el contacto con un simulacro y cerrar la venta por email, apoyado en su CRM.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--brand)"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.5"/></svg><div><b>Segmentos con urgencia</b><span>Opositores (Policía Nacional, Correos), docentes y universitarios que necesitan el B2 para terminar la carrera. Cada uno admite su propio mensaje.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--brand)"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.5"/></svg><div><b>Visibilidad en toda España</b><span>Hoy la ficha de Google y la web no aparecen en búsquedas generales de Aptis. Con zona de servicio nacional y SEO por perfil, el alcance sale de Mallorca.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--brand)"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.5"/></svg><div><b>Calendario de convocatorias</b><span>Artículos publicados con meses de antelación a cada oposición, cuando la búsqueda empieza a subir.</span></div></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--brand)"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.5"/></svg><div><b>Un curso que se sigue desde cualquier lugar</b><span>Frente a la formación presencial o subvencionada, la opción online es una ventaja para quien no vive cerca de un centro.</span></div></li>
         </ul>
       </div>
     </div>
@@ -274,92 +335,436 @@ ol.q-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
   <section class="panel" id="p6" role="tabpanel" aria-labelledby="t6" hidden>
     <div>
       <h2>Cuota de visibilidad digital</h2>
-      <p class="lede">Reparto estimado de la visibilidad online entre los analizados para búsquedas de preparación de Aptis. English with Lidia no apareció en ninguna de las búsquedas hechas, de ahí su cuota baja.</p>
+      <p class="lede">Reparto estimado de la visibilidad online entre los analizados para búsquedas de preparación de Aptis. English with Lidia no apareció en ninguna de las búsquedas hechas, de ahí su cuota baja: la web es nueva y aún no posiciona.</p>
     </div>
     <div class="chartbox"><div class="chartwrap"><canvas id="donut" role="img" aria-label="Gráfico de donut con la cuota de visibilidad digital estimada de cada empresa"></canvas></div></div>
     <p class="method"><span class="est">Est.</span> <b>Método:</b> reparto subjetivo a partir de cuántas veces y con qué prominencia aparece cada empresa en las búsquedas hechas para este estudio, de su presencia en directorios (Emagister, Classgap, Superprof) y del tamaño de su oferta. No son datos de tráfico. Para confirmarlos hacen falta Semrush o Ahrefs y la Search Console de Lidia.</p>
+  </section>
+
+  <!-- 8 PRECIOS -->
+  <section class="panel" id="p8" role="tabpanel" aria-labelledby="t8" hidden>
+    <div>
+      <h2>Estudio de precios</h2>
+      <p class="lede">¿Cuánto debe cobrar Lidia para que el marketing le salga a cuenta? Aquí está la cuenta, paso a paso y con números sencillos. Los precios de la formación van sin IVA, porque está exenta. Los servicios de marketing llevan IVA.</p>
+    </div>
+
+    <div class="card client">
+      <span class="k">La cuenta en una frase</span>
+      <p style="color:var(--ink);font-size:1.05rem"><b>Se anuncia un solo curso, el Premium Academic, a un público concreto cada vez. Con el precio de hoy (349 €), Lidia necesita algo más de 5 alumnos al mes para pagar el marketing. Con el precio propuesto (399 €), unos 4,5.</b> Lo que venda por encima de eso es ganancia, antes de contar su tiempo.</p>
+    </div>
+
+    <div class="step">
+      <div class="n" aria-hidden="true">1</div>
+      <div class="body">
+        <h3>¿Cuánto cuesta el marketing cada mes?</h3>
+        <p>Es como abrir una tienda: para que entre gente hay que pagar el cartel y la luz. Aquí el «cartel» es el marketing.</p>
+        <div class="tablewrap"><table class="tbl" style="min-width:520px">
+          <thead><tr><th>Qué se paga</th><th class="num">Al mes</th></tr></thead>
+          <tbody>
+            <tr><td>Gestión de Los Martes No Hay Luna: SEO nacional (648,50 €), Google Ads (357,60 €) y 4 landings (83,33 €). Los reels, guiones, artículos de LinkedIn y la consultoría mensual van incluidos. <span class="src">Presupuesto PRES-2026-021 · IVA no incluido</span></td><td class="num">1.089,43 €</td></tr>
+            <tr><td>IVA del 21 % sobre la gestión. Como la formación de Lidia no lleva IVA, no puede recuperarlo: es un coste más.</td><td class="num">228,78 €</td></tr>
+            <tr><td>Anuncios que se pagan a Google (cifra inicial recomendada; la real se fija tras aceptar el presupuesto). Si Google añade IVA, se suma.</td><td class="num">500,00 €</td></tr>
+            <tr class="client"><td><b>Total</b></td><td class="num"><b>1.818,21 €</b></td></tr>
+          </tbody></table></div>
+        <div class="res"><b>Otra vía: facturar sin IVA.</b> Existe la posibilidad de facturar la gestión sin IVA a través de una LLC partner de Los Martes No Hay Luna. Si se confirma, desaparecen los 228,78 € de IVA y el marketing cuesta <b>1.589,43 € al mes</b>: bastarían 4,6 alumnos a 349 € o 4,0 a 399 €. Las condiciones y el efecto fiscal se confirman con la asesoría.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="n" aria-hidden="true">2</div>
+      <div class="body">
+        <h3>¿Qué curso se anuncia y a qué precio?</h3>
+        <p>Se anuncia un solo curso, el <b>Premium Academic</b>, porque es el principal, funciona en grupo y no consume horas 1 a 1. Los otros dos programas no se anuncian: se ofrecen a quien ya ha pedido información.</p>
+        <div class="tablewrap"><table class="tbl" style="min-width:600px">
+          <thead><tr><th>Programa</th><th class="num">Precio hoy</th><th class="num">Precio propuesto</th><th>Papel</th></tr></thead>
+          <tbody>
+            <tr class="client"><td><span class="nm">Premium Academic</span></td><td class="num">349 €</td><td class="num"><b>399 €</b></td><td><b>Es el que se anuncia.</b> Queda entre los cursos en grupo (249–300 €) y el British Council (460 €). Cuotas de 133 €.</td></tr>
+            <tr><td><span class="nm">Tutorizado</span></td><td class="num">649 €</td><td class="num"><b>699 €</b></td><td>No se anuncia. Es el ascenso para quien quiere más acompañamiento. Nadie publica algo igual.</td></tr>
+            <tr><td><span class="nm">Express</span> (10 h, 1 a 1)</td><td class="num">195 €</td><td class="num"><b>249 €</b></td><td>No se anuncia. Es una puerta de entrada tras el diagnóstico. Hoy cada hora sale a 19,5 €; con 249 € sale a 24,9 €.</td></tr>
+          </tbody></table></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="n" aria-hidden="true">3</div>
+      <div class="body">
+        <h3>¿Cuántos alumnos hacen falta para pagar el marketing?</h3>
+        <p>Se divide el coste del marketing (1.818,21 €) entre lo que cuesta cada programa. Como solo se anuncia uno, el que cuenta es el Premium Academic.</p>
+        <div class="tablewrap"><table class="tbl" style="min-width:560px">
+          <thead><tr><th>Si todos los alumnos compraran…</th><th class="num">Con el precio de hoy</th><th class="num">Con el precio propuesto</th></tr></thead>
+          <tbody>
+            <tr class="client"><td><b>Premium Academic</b> (el que se anuncia)</td><td class="num"><b>≈ 5,2 alumnos</b></td><td class="num"><b>≈ 4,6 alumnos</b></td></tr>
+            <tr><td>Tutorizado, para comparar</td><td class="num">2,8 alumnos</td><td class="num">2,6 alumnos</td></tr>
+            <tr><td>Express, para comparar</td><td class="num">9,3 alumnos</td><td class="num">7,3 alumnos</td></tr>
+          </tbody></table></div>
+        <p class="legend-note">Los precios de Lidia van sin IVA, así que cada alumno aporta el precio completo.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="n" aria-hidden="true">4</div>
+      <div class="body">
+        <h3>¿Cuántos alumnos traen los 500 € de anuncios?</h3>
+        <p>Depende de lo que cueste conseguir a cada alumno. Todavía no se sabe, porque no hay campaña. Por eso se calculan tres casos, vendiendo solo el Premium Academic.</p>
+        <div class="tablewrap"><table class="tbl" style="min-width:0">
+          <thead><tr><th>Caso</th><th class="num">Coste por alumno</th><th class="num">Alumnos con 500 €</th><th class="num">Al mes, precios de hoy</th><th class="num">Al mes, precios propuestos</th></tr></thead>
+          <tbody>
+            <tr><td><span class="nm">Bueno</span></td><td class="num">≈ 33 €</td><td class="num">≈ 14–15</td><td class="num"><span class="good">+ 3.420 €</span></td><td class="num"><span class="good">+ 3.610 €</span></td></tr>
+            <tr class="client"><td><span class="nm">Normal</span></td><td class="num">≈ 67 €</td><td class="num">≈ 7</td><td class="num"><span class="good">+ 800 €</span></td><td class="num"><span class="good">+ 900 €</span></td></tr>
+            <tr><td><span class="nm">Malo</span></td><td class="num">≈ 250 €</td><td class="num">≈ 2</td><td class="num"><span class="bad">− 1.120 €</span></td><td class="num"><span class="bad">− 1.090 €</span></td></tr>
+          </tbody></table></div>
+        <p class="legend-note"><span class="est">Est.</span> «Al mes» = lo que sobra (+) o falta (−): lo que venden esos alumnos menos los 1.818,21 € del marketing, antes del tiempo de Lidia. Con los precios propuestos se supone que cada alumno cuesta un 10 % más de conseguir, porque un precio mayor convence a algo menos de gente.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="n" aria-hidden="true">5</div>
+      <div class="body">
+        <h3>¿Qué quiere decir todo esto?</h3>
+        <div class="res"><b>En el caso normal, el marketing se paga solo</b> y deja alrededor de 900 € al mes con los precios propuestos, antes del tiempo de Lidia.</div>
+        <div class="res bad"><b>En el caso malo, se pierde dinero.</b> Por eso se empieza con 500 € y se mide durante 4–6 semanas. Si cada alumno sale demasiado caro, se cambia el mensaje, la landing o el precio antes de gastar más.</div>
+        <ul>
+          <li><b>El primer mes es de aprendizaje.</b> La campaña tarda en afinarse y es normal que traiga menos alumnos.</li>
+          <li><b>El SEO tarda de 4 a 6 meses.</b> Al principio solo los anuncios traen alumnos.</li>
+          <li><b>La cifra clave:</b> con el Premium a 399 €, si cada alumno cuesta 110 € o menos de conseguir, los 500 € de anuncios pagan todo el marketing. Por encima, se pierde dinero.</li>
+          <li><b>Cuando el SEO funcione,</b> la campaña de Google Ads se puede pausar, como permite el presupuesto. Se dejan de pagar 357,60 € de gestión (más IVA) y los anuncios.</li>
+          <li><b>Hay que adelantar dinero:</b> en 6 meses, el marketing suma unos 10.900 € (con el IVA de la gestión).</li>
+          <li><b>Un curso y un público a la vez:</b> un solo mensaje, una sola landing y una sola cifra que medir. Con 500 € al mes no se pueden probar tres públicos: tocarían unos 2 alumnos a cada uno y no se sabría qué funciona.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h3>¿A quién se anuncia primero? La recomendación: universitarios</h3>
+      <p class="lede" style="margin-top:6px">El anuncio no vende «un curso de Aptis»: vende lo que la persona necesita conseguir. El curso es solo el camino. Los tres públicos tienen sentido, pero conviene empezar por uno y medirlo.</p>
+    </div>
+    <div class="grid g4">
+      <div class="card client"><span class="k">Universitarios · empezar aquí</span><span class="v">Terminar la carrera</span><p>Necesitan el B2 para titularse.</p><p><b>Mensaje:</b> «Sin el B2 no te titulas. Apruébalo en semanas.»</p></div>
+      <div class="card"><span class="k">Opositores · segunda fase</span><span class="v">No perder la plaza</span><p>Tienen fecha límite. Cada cuerpo pide un nivel distinto: la Policía Nacional (escala básica) exige un mínimo de A2.</p><p><b>Mensaje:</b> «Llevas dos años opositando. No pierdas la plaza por el inglés.»</p></div>
+      <div class="card"><span class="k">Docentes · tercera fase</span><span class="v">Acreditar el nivel</span><p>El reconocimiento depende de la comunidad y del examen. Andalucía reconoce Aptis Advanced desde la Orden del 26 de marzo de 2025.</p><p><b>Mensaje:</b> «Tu acreditación de inglés, sin que te quite el curso escolar.»</p></div>
+    </div>
+
+    <div class="step">
+      <div class="n" aria-hidden="true">★</div>
+      <div class="body">
+        <h3>Por qué empezar por los universitarios</h3>
+        <ul>
+          <li><b>Ya compran.</b> De los primeros contactos de Lidia, la mayoría son universitarios que necesitan el B2. Es la única señal real de demanda. Las demás son hipótesis.</li>
+          <li><b>Una necesidad, un mensaje.</b> «Sin el B2 no hay título» sirve para todos. En opositores cada cuerpo pide un nivel distinto (la Policía Nacional, solo A2). En docentes depende de la comunidad y del examen. Más públicos obligan a más landings y a más riesgo.</li>
+          <li><b>El curso encaja.</b> El Premium Academic es grupal, con speaking en directo y cuotas de 133 €. El universitario no necesita clases 1 a 1.</li>
+          <li><b>Menos choque con AG Academy.</b> Su embudo más visible apunta a opositores (colaboración con OposDeport). <span class="est">Est.</span></li>
+          <li><b>Respuesta rápida.</b> El universitario decide en días o semanas. En 4–6 semanas hay datos para decidir. El opositor depende de la fecha de cada convocatoria.</li>
+          <li><b>Prepara el siguiente paso.</b> Los primeros aprobados dan reseñas y cifras propias, que sirven para vender después a opositores y docentes, con un precio mayor y el Tutorizado como ascenso.</li>
+        </ul>
+        <div class="res bad"><b>El riesgo:</b> es el público más sensible al precio. La universidad ofrece cursos a 171 € con las tasas incluidas. Se reduce mostrando las 3 cuotas de 133 €, el precio total con el examen y lo que no da un curso barato: speaking en directo y grabaciones.</div>
+      </div>
+    </div>
+
+    <div class="tablewrap"><table class="tbl" style="min-width:640px">
+      <caption style="text-align:left;padding:12px;font-weight:600;caption-side:top">Valoración de cada público, de 1 (peor) a 5 (mejor) <span class="est">Est.</span></caption>
+      <thead><tr><th>Criterio</th><th class="num">Universitarios</th><th class="num">Opositores</th><th class="num">Docentes</th></tr></thead>
+      <tbody>
+        <tr><td>Ya compran hoy</td><td class="num">5</td><td class="num">2</td><td class="num">3</td></tr>
+        <tr><td>Urgencia y fecha límite</td><td class="num">3</td><td class="num">5</td><td class="num">4</td></tr>
+        <tr><td>Capacidad de pago (399 €)</td><td class="num">2</td><td class="num">4</td><td class="num">4</td></tr>
+        <tr><td>Poca competencia en anuncios</td><td class="num">4</td><td class="num">2</td><td class="num">3</td></tr>
+        <tr><td>Mensaje y landing sencillos</td><td class="num">5</td><td class="num">3</td><td class="num">2</td></tr>
+        <tr><td>Encaje con el Premium Academic</td><td class="num">5</td><td class="num">3</td><td class="num">3</td></tr>
+        <tr class="client"><td><b>Total</b></td><td class="num"><b>24</b></td><td class="num"><b>19</b></td><td class="num"><b>19</b></td></tr>
+      </tbody></table></div>
+    <p class="method"><span class="est">Est.</span> Es una valoración estratégica con la información disponible, no un dato medido. Falta el volumen de búsquedas de cada público en el Planificador de palabras clave de Google. Si las búsquedas de universitarios resultan muy escasas o caras, se invierte el orden.</p>
+
+    <div class="grid g2">
+      <div class="card client">
+        <h3>Cuándo se pasa al siguiente público</h3>
+        <p>Cada alumno debe costar <b>110 € o menos</b> de conseguir. Con el Premium a 399 €, a ese coste los 500 € de anuncios pagan todo el marketing. Por encima de 110 €, se pierde dinero y se corrige antes de ampliar.</p>
+      </div>
+      <div class="card">
+        <h3>El orden previsto</h3>
+        <ul class="sources" style="font-size:.93rem">
+          <li><b>Semanas 1–6:</b> universitarios con el Premium Academic.</li>
+          <li><b>Mes 3 en adelante:</b> opositores, con su propia landing y el Tutorizado como ascenso.</li>
+          <li><b>Mes 4–6:</b> docentes, empezando por una comunidad.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h3>Para comparar: qué cobra el mercado</h3>
+      <p class="lede" style="margin-top:6px">Precios publicados en las webs de cada centro a octubre de 2026. El precio por hora es aproximado y solo compara cursos con horas indicadas.</p>
+    </div>
+    <div class="tablewrap">
+      <table class="tbl">
+        <thead><tr><th>Oferta</th><th>Formato</th><th class="num">Horas</th><th class="num">Precio</th><th class="num">€ por hora</th><th>Fuente</th></tr></thead>
+        <tbody>
+          <tr class="client"><td><span class="nm">Lidia · Express</span></td><td>1 a 1, online</td><td class="num">10</td><td class="num">195 €</td><td class="num">19,5 €</td><td><span class="src">Web y reunión</span></td></tr>
+          <tr class="client"><td><span class="nm">Lidia · Premium Academic</span></td><td>Curso online, speaking en directo, 3 meses de acceso</td><td class="num">N/D</td><td class="num">349 €</td><td class="num">N/D</td><td><span class="src">Web y reunión</span></td></tr>
+          <tr class="client"><td><span class="nm">Lidia · Tutorizado</span></td><td>4 sesiones privadas de speaking y corrección del writing</td><td class="num">4 sesiones</td><td class="num">649 €</td><td class="num">N/D</td><td><span class="src">Web y reunión</span></td></tr>
+          <tr><td><span class="nm">British Council</span></td><td>Curso de 10 h</td><td class="num">10</td><td class="num">199 €</td><td class="num">19,9 €</td><td><span class="src">britishcouncil.es</span></td></tr>
+          <tr><td><span class="nm">British Council</span></td><td>Destino Aptis ESOL, 25 h</td><td class="num">25</td><td class="num">460 €</td><td class="num">18,4 €</td><td><span class="src">britishcouncil.es</span></td></tr>
+          <tr><td><span class="nm">Blue Parrot School</span></td><td>Directo en grupo, grabado, online y presencial</td><td class="num">28</td><td class="num">249 €</td><td class="num">8,9 €</td><td><span class="src">blueparrotschool.com</span></td></tr>
+          <tr><td><span class="nm">Ready Go Training</span></td><td>Grupo en directo, 3 h por semana. Intensivo de 2 meses</td><td class="num">≈ 24 <span class="est">Est.</span></td><td class="num">269–299 €</td><td class="num">11–12 €</td><td><span class="src">readygotraining.com</span></td></tr>
+          <tr><td><span class="nm">Ready Go Training</span></td><td>Plan mensual, de 3 a 5 meses. Tasas aparte</td><td class="num">≈ 12 al mes <span class="est">Est.</span></td><td class="num">65–72 € al mes</td><td class="num">5–6 €</td><td><span class="src">readygotraining.com</span></td></tr>
+          <tr><td><span class="nm">Univ. Pablo de Olavide</span></td><td>Curso de 10 h con tasas del examen, gestión y material</td><td class="num">10</td><td class="num">171 € (General) · 183 € (Advanced)</td><td class="num">N/D</td><td><span class="src">upo.es</span></td></tr>
+          <tr><td><span class="nm">Academia Hermes</span></td><td>Clases online (ficha de 2023)</td><td class="num">N/D</td><td class="num">270 €</td><td class="num">N/D</td><td><span class="src">academiahermes.es</span></td></tr>
+          <tr><td><span class="nm">Emagister</span></td><td>Curso listado en el portal</td><td class="num">N/D</td><td class="num">340 € con IVA</td><td class="num">N/D</td><td><span class="src">emagister.com</span></td></tr>
+          <tr><td><span class="nm">AG Academy</span></td><td>Online y presencial, más de 25 h mensuales en directo y 500 lecciones grabadas. Pago a plazos</td><td class="num">N/D</td><td class="num">No publica precios</td><td class="num">N/D</td><td><span class="src">agacademyaptis.com</span></td></tr>
+          <tr><td><span class="nm">Aptis Prepare</span></td><td>Intensivos y plan a tu ritmo</td><td class="num">24 (intensivo)</td><td class="num">No publica precios</td><td class="num">N/D</td><td><span class="src">aptisprepare.com</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="method"><b>Examen oficial:</b> el British Council recomienda 95 € para Aptis General y Aptis for Teachers y 110 € para Aptis Advanced. Conviene aclarar en la web si los programas de Lidia los incluyen o van aparte.</p>
+
+    <div class="grid g2">
+      <div class="card"><h3>Lo que se ve</h3>
+        <ul class="sources" style="font-size:.93rem">
+          <li><b>Grupo en directo de 24–28 h:</b> entre 249 € y 300 €. Es el precio que compara quien busca «curso Aptis online».</li>
+          <li><b>British Council:</b> la referencia alta, con 460 € por 25 h. Tiene marca, pero no trato individual.</li>
+          <li><b>Universidad:</b> 171 € con las tasas del examen incluidas. Es el ancla de los universitarios, el perfil que compra hoy.</li>
+          <li><b>Sin precio a la vista:</b> AG Academy y Aptis Prepare no publican precios, así que la comparación se hace por WhatsApp. Publicar los de Lidia reduce fricción, y exige que sean defendibles.</li>
+          <li><b>Individual:</b> nadie publica un programa 1 a 1 con corrección del examen. Ahí está el margen de precio.</li>
+        </ul>
+      </div>
+      <div class="card"><h3>Dónde está hoy Lidia</h3>
+        <ul class="sources" style="font-size:.93rem">
+          <li><b>Express (195 €):</b> vende horas individuales al precio de un curso. Es el precio más desajustado.</li>
+          <li><b>Premium Academic (349 €):</b> en la franja media. Con speaking en directo y 3 meses de acceso admite subir hacia el British Council.</li>
+          <li><b>Tutorizado (649 €):</b> sin comparable directo. Admite subida, que se debe probar con opositores y docentes antes que con universitarios.</li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <div class="grid g2">
+      <div class="card client">
+        <h3>Precio recomendado para el lanzamiento</h3>
+        <p><b>Express 249 €</b> · <b>Premium Academic 399 €</b> · <b>Tutorizado 699 €</b></p>
+        <p>Se revisan a las 6–8 semanas con datos reales. Si la conversión aguanta y ya hay reseñas, se puede probar una subida: Express 279 €, Premium 449 € y Tutorizado 790 €. Si baja más de lo previsto, se vuelve a estos precios.</p>
+      </div>
+      <div class="card">
+        <h3>Ideas a probar</h3>
+        <ul class="sources" style="font-size:.93rem">
+          <li><b>Bono de 4 sesiones individuales por 120 €</b> (30 € la hora), como propone el presupuesto de Los Martes No Hay Luna. Sirve para pasar el speaking base a grupo y vender lo individual aparte.</li>
+          <li><b>Pack para opositores:</b> Premium Academic más Tutorizado, en torno a 950 € en lugar de 1.098 €.</li>
+          <li><b>Curso más examen:</b> mostrar un precio total, como hace la universidad (171 € con las tasas). Las tasas del examen (95 € o 110 €) se suman a la oferta, no al margen.</li>
+          <li><b>Ascenso al Tutorizado:</b> a quien compra el Premium Academic se le ofrece, en el seguimiento, el programa con sesiones 1 a 1. Así se vende más sin anunciarlo.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Reglas para sostener los precios</h3>
+      <ul class="sources" style="font-size:.93rem">
+        <li><b>El «antes 549 €»:</b> la normativa de consumo pide que el precio de referencia sea el más bajo aplicado en los 30 días previos. Si 549 € no se llegó a cobrar, conviene retirarlo y hablar de valor, no de rebaja. Verificar con la asesoría.</li>
+        <li><b>Descuentos con motivo:</b> ligados a una convocatoria o a una fecha límite real, con inicio y fin.</li>
+        <li><b>Garantía con límite:</b> «acceso ampliado hasta aprobar» durante un plazo definido, por ejemplo 6 meses, y con condiciones por escrito.</li>
+        <li><b>Cobro en cuotas:</b> se anuncia «3 cuotas de 133 €», con el total (399 €) siempre visible al lado. La cuota baja la barrera de entrada, sobre todo para universitarios, y el total visible evita confusiones. Con cuotas automáticas por tarjeta, para que las 3 mensualidades no dependan de recordatorios.</li>
+        <li><b>Cambios de precio:</b> una vez al trimestre como máximo y con una prueba de 4–6 semanas.</li>
+      </ul>
+    </div>
+
+    <p class="method"><span class="est">Est.</span> <b>Qué falta para afinar:</b> las horas reales de dedicación de Lidia en cada programa, si Google Ads factura con IVA, las comisiones de la pasarela de pago y el coste por clic real de las palabras clave. Con esos datos el cálculo pasa de estimación a presupuesto.</p>
+  </section>
+
+  <!-- 9 PALABRAS CLAVE -->
+  <section class="panel" id="p9" role="tabpanel" aria-labelledby="t9" hidden>
+    <div>
+      <h2>Estudio de palabras clave</h2>
+      <p class="lede">Las palabras clave son lo que la gente escribe en Google. Esta pestaña dice cuáles usar, para qué público y dónde: en un anuncio o en un artículo. Empieza por los universitarios.</p>
+    </div>
+
+    <div class="note"><b>Falta el volumen.</b> Esta es la lista de partida, ordenada por lo que quiere la persona. El número de búsquedas y el coste por clic de cada palabra no se han medido todavía: hace falta Semrush o el Planificador de palabras clave de Google. Las prioridades salen de la intención de cada búsqueda, no de datos de tráfico.</div>
+
+    <div class="grid g4">
+      <div class="card client"><span class="k">Comprar</span><span class="v">Quiere un curso ya</span><p>Va a los anuncios y a la landing. Es donde se gasta el presupuesto.</p></div>
+      <div class="card"><span class="k">Decidir</span><span class="v">Compara opciones</span><p>Va a un artículo que ayuda a elegir y termina en la landing.</p></div>
+      <div class="card"><span class="k">Informarse</span><span class="v">Tiene una duda</span><p>Va a un artículo del blog. Atrae gente al principio de la decisión.</p></div>
+      <div class="card"><span class="k">Regla del coste por clic</span><span class="v">≈ 1,65 € máx. <span class="est">Est.</span></span><p>Con 110 € por alumno y 1,5 alumnos por cada 100 visitas, una palabra de más de 1,65 € por clic no sale a cuenta.</p></div>
+    </div>
+
+    <div>
+      <h3>Fase 1 · Universitarios</h3>
+      <p class="lede" style="margin-top:6px">Los que compran hoy. Una landing y cuatro grupos de anuncios: curso, el B2 para la carrera, urgencia y marca.</p>
+    </div>
+    <div class="tablewrap"><table class="tbl" style="min-width:860px"><thead><tr><th>Grupo</th><th>Búsquedas de ejemplo</th><th>Qué quiere</th><th>Dónde</th><th>Página de destino</th><th>Prioridad</th></tr></thead><tbody><tr><td><span class="nm">Curso para el B2</span></td><td><span class="kw">curso aptis b2 online</span><span class="kw">preparación aptis b2</span><span class="kw">clases aptis b2</span><span class="kw">academia aptis online</span><span class="kw">curso aptis general b2</span></td><td>Comprar</td><td>Anuncios y SEO</td><td>Landing de universitarios</td><td><span class="pill alta">Alta</span></td></tr><tr><td><span class="nm">El B2 para la carrera</span></td><td><span class="kw">b2 inglés universidad</span><span class="kw">acreditar b2 inglés grado</span><span class="kw">título b2 para graduarme</span><span class="kw">aptis b2 universidad</span><span class="kw">aptis válido para la universidad</span></td><td>Comprar o decidir</td><td>Anuncios y artículo</td><td>Landing de universitarios y artículo «¿Mi universidad acepta el Aptis?»</td><td><span class="pill alta">Alta</span></td></tr><tr><td><span class="nm">Lo necesito ya</span></td><td><span class="kw">aprobar aptis b2 rápido</span><span class="kw">sacar el b2 en un mes</span><span class="kw">b2 inglés urgente</span><span class="kw">aptis b2 intensivo</span></td><td>Comprar</td><td>Anuncios</td><td>Landing de universitarios</td><td><span class="pill alta">Alta</span></td></tr><tr><td><span class="nm">Marca</span></td><td><span class="kw">english with lidia</span><span class="kw">neuroaptis</span><span class="kw">englishwithlidia</span></td><td>Comprar (ya la conocen)</td><td>Anuncios de marca, con poco gasto, y SEO</td><td>Home</td><td><span class="pill alta">Alta</span></td></tr><tr><td><span class="nm">Aptis frente a otros</span></td><td><span class="kw">aptis o cambridge b2</span><span class="kw">aptis vs cambridge</span><span class="kw">b2 más fácil de sacar</span><span class="kw">aptis o trinity</span></td><td>Decidir</td><td>Artículo SEO con enlace a la landing</td><td>Blog</td><td><span class="pill media">Media</span></td></tr><tr><td><span class="nm">El examen</span></td><td><span class="kw">cuánto cuesta el examen aptis</span><span class="kw">dónde hacer el examen aptis</span><span class="kw">fechas examen aptis</span><span class="kw">cómo es el examen aptis b2</span></td><td>Informarse</td><td>SEO</td><td>Blog</td><td><span class="pill media">Media</span></td></tr><tr><td><span class="nm">Práctica</span></td><td><span class="kw">aptis speaking b2 ejemplos</span><span class="kw">aptis writing b2 modelo</span><span class="kw">simulacro aptis b2</span><span class="kw">ejercicios aptis listening</span></td><td>Informarse</td><td>SEO y diagnóstico gratuito</td><td>Blog y diagnóstico gratuito</td><td><span class="pill baja">Baja</span></td></tr></tbody></table></div>
+
+    <div>
+      <h3>Fase 2 · Opositores</h3>
+      <p class="lede" style="margin-top:6px">Cada cuerpo pide un nivel distinto: la Policía Nacional (escala básica) exige un mínimo de A2, según el Ministerio del Interior. Por eso conviene una página por cuerpo.</p>
+    </div>
+    <div class="tablewrap"><table class="tbl" style="min-width:860px"><thead><tr><th>Grupo</th><th>Búsquedas de ejemplo</th><th>Qué quiere</th><th>Dónde</th><th>Página de destino</th><th>Prioridad</th></tr></thead><tbody><tr><td><span class="nm">Aptis para oposiciones</span></td><td><span class="kw">aptis oposiciones</span><span class="kw">inglés oposiciones título</span><span class="kw">aptis válido oposiciones</span><span class="kw">título de inglés oposiciones puntos</span></td><td>Decidir</td><td>SEO y anuncios</td><td>Landing de opositores</td><td><span class="pill alta">Alta</span></td></tr><tr><td><span class="nm">Por cuerpo</span></td><td><span class="kw">aptis policía nacional</span><span class="kw">aptis guardia civil</span><span class="kw">inglés correos oposiciones</span><span class="kw">inglés oposiciones administrativo</span></td><td>Decidir</td><td>Una página y un anuncio por cuerpo</td><td>Landings por cuerpo</td><td><span class="pill media">Media</span></td></tr><tr><td><span class="nm">Curso</span></td><td><span class="kw">curso aptis para oposiciones</span><span class="kw">preparar aptis oposiciones</span></td><td>Comprar</td><td>Anuncios</td><td>Landing de opositores</td><td><span class="pill alta">Alta</span></td></tr></tbody></table></div>
+
+    <div>
+      <h3>Fase 3 · Docentes</h3>
+      <p class="lede" style="margin-top:6px">El reconocimiento depende de la comunidad y del examen. Andalucía reconoce Aptis Advanced desde la Orden del 26 de marzo de 2025. Los anuncios de curso solo tienen sentido si Lidia prepara ese nivel.</p>
+    </div>
+    <div class="tablewrap"><table class="tbl" style="min-width:860px"><thead><tr><th>Grupo</th><th>Búsquedas de ejemplo</th><th>Qué quiere</th><th>Dónde</th><th>Página de destino</th><th>Prioridad</th></tr></thead><tbody><tr><td><span class="nm">Acreditación</span></td><td><span class="kw">aptis advanced docentes</span><span class="kw">acreditar inglés profesorado</span><span class="kw">habilitación lingüística inglés</span><span class="kw">aptis advanced andalucía</span><span class="kw">profesorado bilingüe inglés título</span></td><td>Decidir</td><td>SEO y anuncios</td><td>Landing de docentes, una por comunidad</td><td><span class="pill media">Media</span></td></tr><tr><td><span class="nm">Curso</span></td><td><span class="kw">curso aptis advanced</span><span class="kw">preparar aptis advanced</span><span class="kw">aptis c1 online</span></td><td>Comprar</td><td>Anuncios</td><td>Landing de docentes</td><td><span class="pill media">Media</span></td></tr></tbody></table></div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h3>Palabras que se excluyen en los anuncios</h3>
+        <p>Son las que atraen clics que no compran. Se afinan con el informe de términos de búsqueda de la campaña.</p>
+        <ul class="sources" style="font-size:.93rem">
+          <li><b>Gratis y descargas:</b> <span class="kw">gratis</span><span class="kw">pdf</span><span class="kw">descargar</span><span class="kw">soluciones</span><span class="kw">respuestas</span></li>
+          <li><b>Empleo:</b> <span class="kw">trabajo</span><span class="kw">empleo</span><span class="kw">oferta</span><span class="kw">vacantes</span></li>
+          <li><b>Otros exámenes:</b> <span class="kw">ielts</span><span class="kw">toefl</span><span class="kw">trinity</span><span class="kw">duolingo</span></li>
+          <li><b>Otros países:</b> <span class="kw">colombia</span><span class="kw">méxico</span><span class="kw">perú</span><span class="kw">argentina</span><span class="kw">vietnam</span></li>
+        </ul>
+        <p class="legend-note">«Cambridge» se excluye solo en la campaña de compra. Las comparaciones se atienden con artículos.</p>
+      </div>
+      <div class="card">
+        <h3>Cómo se configura la primera campaña</h3>
+        <ul class="sources" style="font-size:.93rem">
+          <li><b>Tipo de concordancia:</b> de frase y exacta. Se evita la amplia al principio, porque gasta en búsquedas que no interesan.</li>
+          <li><b>Ubicación:</b> España. Aptis se usa también en América Latina y en Asia, y esas búsquedas gastarían presupuesto.</li>
+          <li><b>Tamaño:</b> unas 15–25 palabras en 3 grupos de anuncios (curso, el B2 para la carrera, urgencia) y una campaña pequeña de marca.</li>
+          <li><b>Promesas:</b> sin «aprobado garantizado» en los anuncios, porque las plataformas limitan las promesas de resultado.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h3>Los primeros 6 artículos del blog</h3>
+      <p class="lede" style="margin-top:6px">El presupuesto incluye 2 artículos al mes, así que esta lista cubre los primeros 3 meses. Cada artículo termina en la landing de su público.</p>
+    </div>
+    <div class="tablewrap"><table class="tbl" style="min-width:760px">
+      <thead><tr><th class="num">Nº</th><th>Artículo</th><th>Público</th><th>Grupo</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>Aptis o Cambridge B2: cuál elegir para acreditar el inglés en la universidad</td><td>Universitarios</td><td>Aptis frente a otros</td></tr>
+        <tr><td class="num">2</td><td>¿Mi universidad acepta el Aptis? Cómo comprobarlo paso a paso</td><td>Universitarios</td><td>El B2 para la carrera</td></tr>
+        <tr><td class="num">3</td><td>Cuánto cuesta el examen Aptis y dónde hacerlo en España</td><td>Universitarios</td><td>El examen</td></tr>
+        <tr><td class="num">4</td><td>Cómo aprobar el Aptis B2: guía por destrezas (speaking, writing, listening y reading)</td><td>Universitarios</td><td>Práctica</td></tr>
+        <tr><td class="num">5</td><td>Aptis para oposiciones: qué cuerpos lo aceptan y con qué nivel</td><td>Opositores</td><td>Aptis para oposiciones</td></tr>
+        <tr><td class="num">6</td><td>Aptis Advanced para docentes: qué comunidades lo reconocen</td><td>Docentes</td><td>Acreditación</td></tr>
+      </tbody></table></div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h3>Lo que se ve en Google</h3>
+        <ul class="sources" style="font-size:.93rem">
+          <li><b>Examen y fechas:</b> aparecen centros de idiomas de universidades, el British Council y centros privados. Es difícil superarlos, así que conviene el ángulo largo y práctico.</li>
+          <li><b>Cursos para el B2:</b> aparecen portales de cursos, como Emagister, y centros universitarios.</li>
+          <li><b>Aptis frente a Cambridge:</b> aparecen artículos genéricos, algunos patrocinados. Hay espacio para uno completo y útil.</li>
+          <li><b>Oposiciones:</b> aparecen portales y artículos que explican dónde vale el Aptis. Falta contenido por cuerpo.</li>
+        </ul>
+        <p><span class="src">Fuente: búsquedas de octubre de 2026</span></p>
+      </div>
+      <div class="card client">
+        <h3>Cómo se completa con datos</h3>
+        <ul class="sources" style="font-size:.93rem">
+          <li><b>1.</b> Se meten estas palabras en Semrush o en el Planificador de Google, con España y español.</li>
+          <li><b>2.</b> Se anotan el volumen y el coste por clic de cada una.</li>
+          <li><b>3.</b> Se quitan las de más de 1,65 € por clic o con muy pocas búsquedas.</li>
+          <li><b>4.</b> Se añaden las sugerencias nuevas que salgan y se ordena por volumen dentro de cada grupo.</li>
+          <li><b>5.</b> Se mira la tendencia de 12 meses para fijar cuándo publicar cada artículo.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Cuándo publicar</h3>
+      <ul class="sources" style="font-size:.93rem">
+        <li><b>Docentes de Madrid:</b> la última convocatoria de habilitación lingüística tuvo plazo del 9 al 22 de enero de 2026. Si se repite, el contenido se publica de octubre a diciembre. <span class="est">Est.</span></li>
+        <li><b>Opositores:</b> cada convocatoria exige el nivel antes de que cierre su plazo. El artículo sale con meses de antelación y se actualiza al publicarse el BOE.</li>
+        <li><b>Universitarios:</b> cada universidad fija sus plazos para pedir el título. La tendencia de 12 meses dirá cuándo sube la búsqueda. <span class="est">Est.</span></li>
+      </ul>
+      <p class="legend-note"><span class="src" style="white-space:normal">Fuente: Comunidad de Madrid · Ministerio del Interior</span></p>
+    </div>
   </section>
 
   <!-- 7 RECOMENDACIONES -->
   <section class="panel" id="p7" role="tabpanel" aria-labelledby="t7" hidden>
     <div>
       <h2>Recomendaciones estratégicas</h2>
-      <p class="lede">Ordenadas por prioridad. Los resultados de SEO y de publicidad tardan en consolidarse: conviene hablar de tendencias a 3–6 meses, no de promesas.</p>
+      <p class="lede">Ordenadas por prioridad e incorporando lo hablado en la reunión del 7 de octubre. El SEO tarda entre 4 y 6 meses en dar resultados y la publicidad necesita varias semanas de aprendizaje, por lo que se trabajan en paralelo.</p>
     </div>
     <div class="recs">
       <article class="rec">
         <div class="meta"><span class="pill alta">Prioridad alta</span><span class="pill plazo">Inmediato</span></div>
-        <h3>Medir antes de invertir: Search Console, GA4 y seguimiento de ventas</h3>
-        <p>Conectar Search Console y GA4 a la web y registrar como conversión la compra de WooCommerce y el envío de formularios. Sin eso no se puede saber qué anuncio o qué página vende.</p>
-        <p class="imp"><b>Impacto:</b> da la línea base real de posiciones, tráfico y coste por alumno.</p>
+        <h3>Ficha de Google Business Profile visible en toda España</h3>
+        <p>La ficha existe y tiene reseñas, pero la web no enlaza a ella y no aparece al buscarla desde fuera de la zona de Lidia. Pasos: enlazarla desde la web (no tiene coste), definir como zona de servicio toda España, revisar nombre, categoría y descripción pensando en la búsqueda «preparación Aptis ESOL» y pedir una reseña tras cada aprobado.</p>
+        <p class="imp"><b>Impacto:</b> Aparecer ante quien busca desde Madrid, Barcelona o Burgos y no solo desde Mallorca. Es el ajuste de mayor efecto y menor esfuerzo.</p>
       </article>
       <article class="rec">
         <div class="meta"><span class="pill alta">Prioridad alta</span><span class="pill plazo">Inmediato</span></div>
-        <h3>Centrar todo el mensaje en el título y la fecha, no en el inglés</h3>
-        <p>Quien compra necesita aprobar un examen concreto para una oposición, una bolsa o un puesto, con una fecha límite. No busca aprender inglés. La home abre con «el inglés que necesitas se consigue en semanas». Conviene que el titular, las landings y los anuncios hablen del resultado: «tu Aptis B2 aprobado para tu oposición, antes de la convocatoria», apoyado en la garantía y en las comunidades que lo reconocen.</p>
-        <p class="imp"><b>Impacto:</b> el mensaje coincide con lo que la gente busca y con lo que escribe en Google, y mejora la calidad de los anuncios y la conversión.</p>
+        <h3>Un mensaje centrado en lo que está en juego: la oposición, el puesto o el título</h3>
+        <p>Quien compra necesita aprobar un examen concreto, con fecha límite, y no busca aprender inglés. La home abre con «el inglés que necesitas se consigue en semanas». Conviene que el titular, las landings y los anuncios hablen del problema real: llevar dos años preparando una oposición y perderla por no tener el título de inglés, con el título como solución en semanas. «Aptis ESOL» solo aparece en una etiqueta pequeña sobre el titular y debería estar en el titular, en el title y en la meta description.</p>
+        <p class="imp"><b>Impacto:</b> La web y el anuncio coinciden con lo que la persona piensa y busca, lo que mejora la calidad de los anuncios y la conversión.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill alta">Prioridad alta</span><span class="pill plazo">Inmediato</span></div>
+        <h3>Medición y seguimiento de cada solicitud</h3>
+        <p>Conectar Search Console y GA4, y registrar como conversión cada solicitud de diagnóstico, cada clic al WhatsApp y cada compra. Quien gestione la web debe instalarlo; con una campaña en marcha se configura al inicio. Las solicitudes se atienden hoy por llamada: conviene sumar WhatsApp y email de seguimiento, y anotar cada contacto para saber cuántos acaban en alumno.</p>
+        <p class="imp"><b>Impacto:</b> Línea base real de posiciones, tráfico y coste por alumno antes de invertir.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill alta">Prioridad alta</span><span class="pill plazo">Antes de lanzar campañas</span></div>
+        <h3>Revisar precios y estructura de la oferta</h3>
+        <p>Con 15 alumnos por ciclo de dos meses a 349 €, los ingresos publicados suman unos 5.235 € por ciclo (alrededor de 2.600 € al mes), antes de impuestos, publicidad y gestión. Con 4 sesiones individuales por alumno, cada ciclo exige unas 60 sesiones 1 a 1. Con esa estructura, la publicidad, el SEO y el contenido, que forman parte del coste de captar alumnos, no se sostienen.</p>
+        <p>La pestaña <b>Precios</b> hace la cuenta con la gestión propuesta (1.089,43 € al mes más IVA, que Lidia no puede recuperar por ser formación exenta) y 500 € de anuncios: el marketing cuesta 1.818,21 € al mes. Con un solo curso anunciado, el Premium Academic, hacen falta algo más de 5 alumnos al mes a 349 € y unos 4,5 a 399 €. Express (249 €) y Tutorizado (699 €) no se anuncian. Revisar los precios a las 6–8 semanas con datos reales.</p>
+        <p class="imp"><b>Impacto:</b> Números que permiten financiar campañas, contenido y gestión sin que el tiempo de Lidia sea el límite. Los importes son los publicados; confirmar si incluyen IVA.</p>
       </article>
       <article class="rec">
         <div class="meta"><span class="pill alta">Prioridad alta</span><span class="pill plazo">1–3 meses</span></div>
-        <h3>SEO on-page de la home y landings por perfil</h3>
-        <p>El titular de la home es emocional y las palabras «Aptis ESOL» solo aparecen en una etiqueta pequeña encima. Revisar title, H1 y meta description para que incluyan «preparación Aptis ESOL». Comprobar si la FAQ lleva marcado FAQPage. Después, crear páginas por intención: opositores, docentes bilingües, B2, C1 y Policía Nacional.</p>
-        <p class="imp"><b>Impacto:</b> tráfico cualificado con menos competencia que «curso Aptis online». Las mismas páginas sirven de destino para los anuncios.</p>
+        <h3>Landings por perfil y un selector «¿cuál es tu caso?» en la home</h3>
+        <p>Una página exclusiva por perfil: docentes, Policía y Guardia Civil, opositores en general y universitarios que necesitan el título para terminar la carrera. Cada una abre con el problema de ese perfil, desarrolla la solución y presenta el curso al final. La home ofrece un selector («Soy docente», «Soy universitario», «Estoy opositando») que lleva a la página correspondiente. Las mismas páginas sirven de destino para los anuncios y para el SEO, con title, H1, meta description y preguntas frecuentes con marcado FAQ revisados.</p>
+        <p class="imp"><b>Impacto:</b> Cada visitante se reconoce en la página, y se compite por términos específicos como «Aptis para oposiciones» antes que por «curso Aptis online».</p>
       </article>
       <article class="rec">
         <div class="meta"><span class="pill alta">Prioridad alta</span><span class="pill plazo">1–3 meses</span></div>
-        <h3>Campaña de Google Ads de búsqueda, pequeña y por nicho</h3>
-        <p>Empezar con unos pocos grupos de anuncios (oposiciones, B2, C1, marca) hacia las landings nuevas, con palabras negativas y presupuesto de prueba. La conversión objetivo es la solicitud de diagnóstico. Antes de anunciar «92 % de aprobados», disponer de datos que lo respalden, porque las plataformas piden justificar este tipo de afirmaciones. Lo mismo vale para la garantía de aprobado, los precios tachados y el aviso de «quedan 12 plazas»: comprobar que sean reales y cumplan la normativa de rebajas y publicidad.</p>
-        <p class="imp"><b>Impacto:</b> resultados visibles antes que el SEO, con riesgo acotado.</p>
+        <h3>Campaña de Google Ads: un curso y un público</h3>
+        <p>Quien busca en Google ya sabe que tiene un problema, aprobar un examen, y busca quien lo resuelva. Se propone empezar por Google Ads con un solo curso (el Premium Academic), un solo público y una conversión clara: la solicitud de diagnóstico. El anuncio no vende el curso, vende el resultado: terminar la carrera, no perder la plaza o acreditar el nivel. Se recomienda empezar por universitarios, que son los que compran hoy y tienen una sola necesidad, y sumar opositores y docentes después. El razonamiento está en la pestaña Precios. Con palabras negativas, presupuesto de prueba y varias semanas de aprendizaje antes de optimizar.</p>
+        <p>Antes de anunciar «92 % de aprobados» conviene tener el respaldo documentado. La garantía de aprobado se redacta mejor como acceso ampliado hasta aprobar, porque las plataformas limitan las promesas de resultado.</p>
+        <p class="imp"><b>Impacto:</b> Resultados visibles antes que el SEO y con riesgo acotado. Una campaña por segmento permite medir qué mensaje funciona antes de abrir otro.</p>
       </article>
       <article class="rec">
-        <div class="meta"><span class="pill alta">Prioridad alta</span><span class="pill plazo">1–3 meses</span></div>
-        <h3>Campañas en Meta dirigidas a quien necesita aprobar sí o sí</h3>
-        <p>Google capta a quien ya busca; Meta llega a la persona antes de que busque, así que funciona mejor con un mensaje de urgencia y una oferta clara: reservar el diagnóstico gratuito o solicitar plaza. Segmentos de partida: opositores y docentes, personas que preparan procesos como Policía Nacional y profesionales que necesitan certificar su nivel. Añadir una campaña de remarketing para quien visitó la web o empezó el formulario sin terminarlo. Creatividades: vídeos de aprobados y piezas cortas del tipo «tu Aptis B2 para tu oposición», con la fecha de convocatoria. Destino: la landing por perfil, con formulario o WhatsApp.</p>
-        <p>Antes de lanzar: instalar el píxel de Meta y la API de conversiones, y tener Instagram y Facebook con contenido, porque quien ve el anuncio entra a mirar el perfil. Revisar cómo se redacta la garantía de aprobado, ya que las políticas de anuncios limitan las promesas de resultados. Hay que dejar varias semanas de aprendizaje antes de optimizar.</p>
-        <p class="imp"><b>Impacto:</b> solicitudes de diagnóstico con coste medible y una vía para recuperar a quien no se decidió a la primera.</p>
-      </article>
-      <article class="rec">
-        <div class="meta"><span class="pill alta">Prioridad alta</span><span class="pill plazo">1–3 meses</span></div>
-        <h3>Sesión gratuita en directo como puerta de entrada</h3>
-        <p>Invitar, desde los anuncios y la web, a entrar gratis en la comunidad y asistir a la próxima sesión online en grupo, solo como oyente y sin intervenir. Un registro rápido (nombre, email, WhatsApp, oposición o puesto, nivel y fecha de examen) deja el contacto en el CRM y permite segmentar. La sesión puede ser un examen real resuelto en directo, explicando cómo se puntúan el writing y el speaking. Al terminar, una oferta con plazo: diagnóstico gratuito o plaza con garantía.</p>
-        <p>Lo que más valor tiene (corrección individual, speaking 1 a 1, feedback personal) se reserva para los programas de pago, de modo que la sesión demuestra el método sin regalarlo. Comprobar antes si Lidia ya hace sesiones gratuitas y cuánta gente hay en su comunidad. Hoy la comunidad de WhatsApp aparece como ventaja de los programas de pago, así que conviene una comunidad o canal gratuito aparte. Pedir consentimiento expreso para escribir por WhatsApp y email.</p>
-        <p class="imp"><b>Impacto:</b> un contacto más barato que el diagnóstico, porque exige menos compromiso, y que llega más calentado a la venta. Medir registros, asistentes, diagnósticos solicitados y ventas.</p>
-      </article>
-      <article class="rec">
-        <div class="meta"><span class="pill media">Prioridad media</span><span class="pill plazo">1–3 meses</span></div>
-        <h3>Seguimiento automático tras el formulario de diagnóstico</h3>
-        <p>La web ya capta solicitudes. Falta una respuesta inmediata por email y WhatsApp, una secuencia que lleve de diagnóstico a programa y un recordatorio a quien no reserva. Los «Recursos gratuitos» pueden servir de segunda puerta de entrada para quien aún no está listo.</p>
-        <p class="imp"><b>Impacto:</b> más contactos convertidos sin aumentar el gasto en tráfico, apoyado en el CRM de Lidera tu Negocio.</p>
-      </article>
-      <article class="rec">
-        <div class="meta"><span class="pill media">Prioridad media</span><span class="pill plazo">1–3 meses</span></div>
-        <h3>Ficha de Google Business Profile y reseñas verificables</h3>
-        <p>La web muestra reseñas con el logo de Google, pero no enlaza ninguna ficha de Google Business Profile y no se encuentra una en Maps ni en las búsquedas. Primero hay que saber de dónde vienen: puede ser una ficha sin dirección pública (negocio de servicios) o un widget con reseñas copiadas a mano, que sería un riesgo. Después, crear o reclamar la ficha, enlazarla desde la web y pedir reseñas de forma sistemática tras cada aprobado. Completar con casos por perfil (docente, policía, profesional).</p>
-        <p class="imp"><b>Impacto:</b> refuerza la confianza en la web y mejora el porcentaje de clics en los anuncios.</p>
+        <div class="meta"><span class="pill media">Prioridad media</span><span class="pill plazo">Empezar ya · efecto en 4–6 meses</span></div>
+        <h3>SEO y contenido con estrategia, en paralelo a la publicidad</h3>
+        <p>El posicionamiento orgánico tarda entre 4 y 6 meses en dar resultados, por lo que se empieza ya (la lista de partida está en la pestaña Palabras clave) y se trabaja junto a la publicidad. Cuando el SEO rinde, la inversión en anuncios puede bajar. Antes de escribir, un estudio de palabras clave que muestre qué busca el cliente ideal, y un calendario de convocatorias (Policía, Correos, educación) para publicar cada artículo con meses de antelación, cuando la búsqueda empieza a subir. Los artículos explican plazos, requisitos de inglés y qué título vale en cada caso, y llevan a la landing del perfil.</p>
+        <p class="imp"><b>Impacto:</b> Tráfico orgánico sostenido y autoridad temática, captado antes de que la persona compare academias.</p>
       </article>
       <article class="rec">
         <div class="meta"><span class="pill media">Prioridad media</span><span class="pill plazo">3–6 meses</span></div>
-        <h3>Blog y vídeo educativos sobre el examen</h3>
-        <p>Contenido útil: diferencias entre B2 y C1, errores típicos de writing, cómo se puntúa el speaking. Se reutiliza en Instagram y TikTok con piezas cortas y variadas.</p>
-        <p class="imp"><b>Impacto:</b> autoridad temática y tráfico orgánico sostenido.</p>
+        <h3>Meta cuando haya contenido en Instagram o TikTok</h3>
+        <p>Meta llega a quien todavía no sabe que necesita el título (opositores en fase temprana, docentes interinos) y permite recuperar visitas de la web. Antes de lanzarlo hay que tener contenido, porque el anuncio lleva al perfil y un perfil vacío resta confianza. Un gasto diario muy bajo rinde poco en una subasta tan disputada, así que el presupuesto se define con el equipo de publicidad. Los vídeos pueden ser sencillos, grabados con el móvil, y centrados en el problema del cliente ideal más que en el curso.</p>
+        <p class="imp"><b>Impacto:</b> Segunda vía de captación y remarketing, una vez que la web y las redes están listas para recibir tráfico.</p>
       </article>
-      <article class="rec">
+            <article class="rec">
         <div class="meta"><span class="pill media">Prioridad media</span><span class="pill plazo">1–3 meses</span></div>
-        <h3>LinkedIn solo como perfil profesional, sin inversión en anuncios</h3>
-        <p>El perfil de LinkedIn publica quizzes sin respuestas: con poca audiencia, las encuestas no funcionan. Reorientarlo hacia el resultado, con un titular como «Preparación Aptis B1, B2 y C1 para oposiciones y promoción», y publicar contenido breve que resuelva dudas reales (qué comunidad reconoce qué título, errores típicos de writing, plazos). Es el canal natural para el programa English for Executives y para profesionales que necesitan certificar su nivel. La inversión publicitaria irá a Meta y no a LinkedIn: el perfil sirve de escaparate de credibilidad y se alimenta de forma orgánica, con poco esfuerzo.</p>
-        <p class="imp"><b>Impacto:</b> refuerza la credibilidad ante perfiles profesionales y abre el segmento Executives sin gasto en anuncios.</p>
-      </article>
-      <article class="rec">
-        <div class="meta"><span class="pill baja">Prioridad baja</span><span class="pill plazo">3–6 meses</span></div>
-        <h3>Separar mensajes para docentes y para otros perfiles</h3>
-        <p>La home habla a docentes y, más abajo, a quien no lo es. En anuncios conviene un mensaje y una landing para cada perfil, y dejar claro qué programa y qué precio corresponde a cada uno.</p>
-        <p class="imp"><b>Impacto:</b> anuncios más precisos y menos abandono en la página.</p>
+        <h3>Masterclass o mini curso gratuito como puerta de entrada</h3>
+        <p>AG Academy lo usa como eje de su captación: una masterclass gratuita (Lidia vio una con 150 invitados) y un curso gratuito de 4 clases a cambio del registro. Hoy Lidia no tiene sesiones gratuitas en grupo, pero sí un diagnóstico gratuito y una comunidad en construcción. Una sesión mensual abierta, con un examen real resuelto en directo, o un mini curso de 3 clases por correo captaría contactos sin consumir horas 1 a 1. Debe llevar consentimiento expreso para escribir después por WhatsApp y email, y terminar con la oferta del Premium Academic con una ventaja de plazo limitado.</p>
+        <p class="imp"><b>Impacto:</b> Contactos más baratos y más preparados para la venta que una solicitud de diagnóstico. El mensaje parte de la urgencia de aprobar, no de «aprender inglés».</p>
       </article>
       <article class="rec">
         <div class="meta"><span class="pill media">Prioridad media</span><span class="pill plazo">Inmediato</span></div>
-        <h3>Quitar los enlaces a redes sin actividad</h3>
-        <p>El pie de la web enlaza a varias redes y al menos el perfil de TikTok no tiene publicaciones ni seguidores. Un perfil vacío resta credibilidad a una web que vende confianza. Decidir qué redes mantendrá de verdad (por ejemplo una o dos), enlazar solo esas y ocultar el resto hasta que tengan contenido.</p>
-        <p class="imp"><b>Impacto:</b> mejora inmediata de la imagen, sin coste, y centra el esfuerzo de contenido en una red.</p>
+        <h3>Quitar o rellenar los enlaces a redes sin contenido</h3>
+        <p>El pie de la web enlaza a varias redes y al menos TikTok no tiene publicaciones ni seguidores. Cada enlace es una vía de salida: la persona abandona la web y encuentra un perfil vacío. Conviene decidir cuántos canales se pueden mantener activos, enlazar solo esos y volver a añadir el resto cuando tengan contenido.</p>
+        <p class="imp"><b>Impacto:</b> Mejora inmediata de la imagen y menos fuga de visitas, sin coste.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill media">Prioridad media</span><span class="pill plazo">Inmediato</span></div>
+        <h3>Aclarar la oferta en la web</h3>
+        <p>Detalles que hoy generan dudas al comprar:</p>
+        <ul><li>Número y duración de las sesiones de speaking en cada programa (solo el Tutorizado las detalla).</li><li>Qué es en directo y qué se abre de forma progresiva: en el curso las sesiones se liberan poco a poco y solo el speaking es en directo.</li><li>Importe de cada cuota, por ejemplo 349 € = 3 cuotas de 116,33 €.</li><li>Que los precios van sin IVA, por tratarse de formación.</li><li>Duración del acceso y qué cubre la garantía, con las condiciones por escrito.</li><li>Que el curso es 100 % online y se sigue desde cualquier lugar, frente a la formación presencial.</li></ul>
+        <p class="imp"><b>Impacto:</b> Menos preguntas antes de comprar y menos abandonos en el último paso.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill media">Prioridad media</span><span class="pill plazo">1–3 meses</span></div>
+        <h3>LinkedIn como escaparate profesional, sin inversión en anuncios</h3>
+        <p>El perfil publica quizzes sin respuestas: con poca audiencia, las encuestas no funcionan y piden un esfuerzo que el lector no quiere hacer. Conviene renovar la imagen del perfil y sustituir los quizzes por contenido breve que ayude: qué comunidades reconocen qué título, errores típicos del writing, plazos de convocatorias. Es también el canal natural para el programa English for Executives.</p>
+        <p class="imp"><b>Impacto:</b> Credibilidad ante perfiles profesionales y un canal de contenido reutilizable, sin gasto en anuncios.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill media">Prioridad media</span><span class="pill plazo">1–3 meses</span></div>
+        <h3>Respaldar las cifras de aprobados sin listar centros</h3>
+        <p>Las cifras de aprobados y de docentes preparados son propias, y las plataformas de anuncios pueden pedir respaldo. Listar los centros donde Lidia ha trabajado se descartó en la reunión, porque algunos ofrecen formación gratuita o subvencionada y podrían llevarse al alumno cercano. Como centro de registro, Lidia recibe los resultados de sus alumnos: desde ahora puede llevar un registro propio de aprobados, con permiso para mostrarlo, y reforzarlo con testimonios por perfil.</p>
+        <p class="imp"><b>Impacto:</b> Prueba verificable que sostiene el mensaje y los anuncios.</p>
+      </article>
+      <article class="rec">
+        <div class="meta"><span class="pill baja">Prioridad baja</span><span class="pill plazo">3–6 meses</span></div>
+        <h3>Proteger el acceso al curso</h3>
+        <p>Para evitar que varias personas compartan una misma cuenta: acceso con enlace mágico o con código enviado al móvil, y límite de sesiones simultáneas. Como Lidia inscribe al alumno en el examen y recibe sus resultados, puede dejar claro con naturalidad que hace seguimiento hasta el aprobado, y compartir una cuenta deja de compensar.</p>
+        <p class="imp"><b>Impacto:</b> Protege los ingresos de cada plaza sin añadir fricción visible para el alumno.</p>
       </article>
     </div>
 
@@ -367,6 +772,7 @@ ol.q-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
       <div class="card">
         <h3>Fuentes</h3>
         <ul class="sources">
+          <li>Reunión de consultoría del 7 de octubre de 2026 (transcripción)</li>
           <li><a href="https://aptisprepare.com/cursos/intensivos/">Aptis Prepare, cursos intensivos</a></li>
           <li><a href="https://blueparrotschool.com/product/aptis-general-b1-b2-c1-28h/">Blue Parrot School, Aptis 28 h</a></li>
           <li><a href="https://readygotraining.com/curso-ingles-aptis-esol/">Ready Go Training, curso Aptis</a></li>
@@ -374,6 +780,10 @@ ol.q-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
           <li><a href="https://es.trustpilot.com/review/aptisacademia.com">Aptis Academia en Trustpilot</a></li>
           <li><a href="https://academiahermes.es/producto/clases-online-aptis">Academia Hermes, clases online Aptis</a></li>
           <li><a href="https://www.emagister.com/aptis-general-advanced-cursos-3670903.htm">Emagister, Aptis General y Advanced</a></li>
+          <li><a href="https://www.agacademyaptis.com/">AG Academy, web, «Sobre nosotros» y landings</a></li>
+          <li><a href="https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/empleo-publico/oposiciones/policia-nacional/escala-basica/requisitos/">Ministerio del Interior, requisitos de la Policía Nacional (escala básica)</a></li>
+          <li><a href="https://www.upo.es/idiomas/aptis/">Universidad Pablo de Olavide, curso de 10 h y examen Aptis</a></li>
+          <li><a href="https://www.britishcouncil.es/en/exam/aptis/variants">British Council España, precio del examen por variante</a></li>
           <li><a href="https://www.educaciontrespuntocero.com/formacion-docente/aptis-esol-examen-de-ingles/">Educación 3.0, Aptis Advanced en Andalucía</a></li>
           <li><a href="https://opencourser.com/course/fqlyq8/1-aptis-advanced-c1-c2-certificado-oficial">Academia Learning, reconocimiento por comunidades</a></li>
         </ul>
@@ -387,39 +797,45 @@ ol.q-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 (function(){
   var DIMS=['Presencia digital','Reputación online','Rango de precios','Amplitud de servicios','Especialización','Experiencia web'];
   var C=[
-    {id:'lidia',name:'English with Lidia',client:true,url:'https://englishwithlidia.es',loc:'Online · Soria',
-     serv:'Aptis ESOL B1, B2 y C1 con método NeuroAptis Strategy, clases online. Tres programas: Express (10 h 1 a 1), Premium Academic (3 meses, directo y speaking) y Tutorizado (3 meses, 4 sesiones 1 a 1). Curso online a tu ritmo, simulacros reales, diagnóstico gratuito y garantía de aprobado.',
-     price:'Pago único por programa: Express 195 € (antes 295 €), Premium Academic 349 € (antes 549 €), Tutorizado 649 €. Fraccionable en 3 cuotas sin intereses. Curso a tu ritmo: N/D',priceNum:195,social:'Declara 30+ docentes aprobados y 92 % de tasa de aprobado (datos propios). Tres testimonios en vídeo y reseñas de Google con 5 estrellas (nº total N/D). Enlaces a varias redes en el pie, al menos una (TikTok) sin seguidores ni publicaciones. Actividad real en el resto: N/D. LinkedIn (/in/englishwithlidia): publica quizzes sin respuestas.',
-     dif:'Método propio, sello de centro colaborador del British Council y embudo de diagnóstico gratuito ya montado.',src:'Captura de la home',s:[7,7,5,5,9,8],x:5,y:9,share:6},
+    {id:'lidia',name:'English with Lidia',client:true,url:'https://englishwithlidia.es',loc:'Online · Mallorca',
+     serv:'Preparación de Aptis ESOL B1, B2 y C1 con método NeuroAptis Strategy, 100 % online. Tres programas: Express (10 h 1 a 1), Premium Academic (curso con sesiones que se abren de forma progresiva, 3 meses de acceso y speaking en directo) y Tutorizado (4 sesiones privadas de speaking y corrección del writing). Pack de speaking extra en la tienda, diagnóstico gratuito y recursos gratuitos. Centro de registro del British Council.',
+     price:'Pago único por programa, con 3 cuotas sin intereses: Express 195 €, Premium Academic 349 € (antes 549 €), Tutorizado 649 €. Sin IVA (formación exenta)',priceNum:195,
+     social:'Web nueva, en construcción y sin posicionar. Ficha de Google Business Profile con reseñas que no aparece en las búsquedas hechas en la reunión (posible zona de servicio limitada). Vídeo promocional y testimonios en la web. TikTok sin contenido. LinkedIn con poca actividad. Instagram: N/D.',
+     dif:'Docente con años de experiencia presencial en centros, método propio y trato individual.',src:'Web y reunión',s:[3,4,3,5,9,7],x:3,y:9,share:3},
     {id:'prepare',name:'Aptis Prepare',url:'https://aptisprepare.com',loc:'Online · España',
      serv:'Intensivos de 8 semanas y 24 h en directo por Zoom, máx. 10 alumnos, clases grabadas; planes a tu ritmo mensual o semestral.',
      price:'N/D',priceNum:0,social:'Afirma +97 % de aprobados (dato propio). Aparece primero en un ranking publicado como nota de prensa.',
-     dif:'Solo Aptis, centro asociado del British Council, directo y grabado.',src:'aptisprepare.com',s:[9,7,4,7,10,8],x:4,y:10,share:29},
+     dif:'Solo Aptis, centro asociado del British Council, directo y grabado.',src:'aptisprepare.com',s:[9,7,4,7,10,8],x:4,y:10,share:26},
     {id:'academia',name:'Aptis Academia',url:'https://es.trustpilot.com/review/aptisacademia.com',loc:'Plataforma online',
      serv:'Más de 4.000 ejercicios, simulacros completos, 80 lecciones de gramática en español, listening propio.',
      price:'Gratis con un simulacro al mes; planes N/D',priceNum:0,social:'Trustpilot sin reseñas.',
-     dif:'Plataforma de práctica con versión gratuita.',src:'Trustpilot',s:[7,3,3,6,10,8],x:3,y:10,share:10},
+     dif:'Plataforma de práctica con versión gratuita.',src:'Trustpilot',s:[7,3,3,6,10,8],x:3,y:10,share:8},
     {id:'blue',name:'Blue Parrot School',url:'https://blueparrotschool.com/product/aptis-general-b1-b2-c1-28h/',loc:'Online y presencial',
      serv:'28 h en directo B1–B2–C1, clases grabadas, materiales incluidos, por Teams.',
-     price:'N/D',priceNum:0,social:'Varias reseñas positivas en su ficha y una que critica clases genéricas y poco orientadas al examen.',
-     dif:'Intensivo de 28 horas en directo.',src:'blueparrotschool.com',s:[7,6,5,5,8,6],x:5,y:8,share:12},
+     price:'249 € el curso de 28 h en directo (grupo)',priceNum:249,social:'Varias reseñas positivas en su ficha y una que critica clases genéricas y poco orientadas al examen.',
+     dif:'Intensivo de 28 horas en directo.',src:'blueparrotschool.com',s:[7,6,5,5,8,6],x:5,y:8,share:10},
     {id:'ready',name:'Ready Go Training',url:'https://readygotraining.com/curso-ingles-aptis-esol/',loc:'Online',
      serv:'Método Sticky, 3 h de clase grupal en directo por semana, plataforma con tests y simulacros; plan mensual o intensivo de 4 semanas.',
-     price:'N/D',priceNum:0,social:'N/D',
-     dif:'Planes flexibles y centro colaborador del British Council.',src:'readygotraining.com',s:[6,5,6,6,9,7],x:6,y:9,share:11},
+     price:'65–72 €/mes; intensivo de 2 meses 269–299 €; 1 mes 135–150 €. Tasas aparte',priceNum:269,social:'N/D',
+     dif:'Planes flexibles y centro colaborador del British Council.',src:'readygotraining.com',s:[6,5,6,6,9,7],x:6,y:9,share:9},
     {id:'bc',name:'British Council España',url:'https://www.britishcouncil.es/cursos-ingles/aptis',loc:'Online y presencial',
      serv:'Cursos de 10, 20 y 25 h (Destino Aptis ESOL), niveles A2, General y Advanced.',
-     price:'N/D',priceNum:0,social:'N/D',
-     dif:'Es el creador del examen.',src:'britishcouncil.es',s:[10,9,8,7,6,8],x:8,y:6,share:25},
+     price:'10 h: 199 €; 25 h (Destino Aptis ESOL): 460 €',priceNum:199,social:'N/D',
+     dif:'Es el creador del examen.',src:'britishcouncil.es',s:[10,9,8,7,6,8],x:8,y:6,share:22},
     {id:'belingual',name:'Belingual',url:'https://es.scribd.com/document/1064577474/unit1',loc:'Online y presencial · Andalucía',
      serv:'Cursos intensivos con tres simulacros finales con jefa de estudios.',
      price:'N/D',priceNum:0,social:'Se presenta como la primera academia de Andalucía en trabajar este examen (autodescripción).',
-     dif:'Experiencia local y simulacros presenciales.',src:'Material del curso',s:[5,5,6,6,8,5],x:6,y:8,share:7}
+     dif:'Experiencia local y simulacros presenciales.',src:'Material del curso',s:[5,5,6,6,8,5],x:6,y:8,share:7},
+    {id:'ag',name:'AG Academy',url:'https://www.agacademyaptis.com/',loc:'Online y presencial',
+     serv:'Aptis General y Advanced (B1, B2, C1), además de Trinity y Oxford. Más de 25 h mensuales de clase en directo, más de 500 lecciones grabadas, simulacros, libro propio y test de nivel. Masterclass y curso gratuitos como puerta de entrada.',
+     price:'No publica precios. Matrícula y materiales incluidos, pago a plazos',priceNum:0,
+     social:'Cifras propias: más de 6.000 alumnos certificados, 94 % de aprobados y 5,0 en Google. Instagram, Facebook, YouTube, TikTok y LinkedIn enlazados, sin revisar. Equipo de seis personas.',
+     dif:'Embudo completo: masterclass y curso gratis, landings por segmento (opositores de Educación Física, Policía) y anuncios.',src:'agacademyaptis.com',s:[9,7,5,9,8,8],x:5,y:8,share:15}
   ];
 
   function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();}
   function col(){return {brand:css('--brand'),ink:css('--ink'),muted:css('--muted'),line:css('--line'),surface:css('--surface'),
-    n:[css('--n1'),css('--n2'),css('--n3'),css('--n4'),css('--n6'),css('--n5')]};}
+    n:[css('--n1'),css('--n2'),css('--n3'),css('--n4'),css('--n6'),css('--n5'),css('--warn')]};}
 
   var charts={};
   function kill(k){if(charts[k]){charts[k].destroy();charts[k]=null;}}
@@ -526,5 +942,4 @@ ol.q-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
   new MutationObserver(rethemed).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
 })();
 </script>
-</body>
-</html>
+</body></html>
